@@ -3034,10 +3034,12 @@ Children:
               Type: BaseDataVariableType
               DataType: Boolean
               ModellingRule: Optional
+              Value: true
             - Name: Enabled
               Type: BaseDataVariableType
               DataType: Boolean
               ModellingRule: Optional
+              Value: true
           - Name: Harmonics
             Type: SideMenuButton
             Children:
@@ -9456,7 +9458,7 @@ Children:
                     - Name: NewPanel
                       Type: BaseDataVariableType
                       DataType: NodeId
-                      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/UI/Screens/RealTimePanels/Compressor"
+                      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/UI/Screens/RealTimePanels/Compressor1"
                     - Name: AliasNode
                       Type: BaseDataVariableType
                       DataType: NodeId
@@ -9540,10 +9542,12 @@ Children:
               Type: BaseDataVariableType
               DataType: Boolean
               ModellingRule: Optional
+              Value: true
             - Name: Enabled
               Type: BaseDataVariableType
               DataType: Boolean
               ModellingRule: Optional
+              Value: true
           - Name: Separator
             Type: SideMenuSectionSeparator
             Children:
