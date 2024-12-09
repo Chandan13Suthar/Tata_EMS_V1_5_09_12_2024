@@ -45500,7 +45500,7 @@ Children:
                       Type: BaseDataVariableType
                       DataType: VariablePointer
                       Description: {"NamespaceIndex":5,"TextId":"SetVariableToModifyDescription"}
-                      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Reports/Shift consumption Report/Sections/DataloggerReport/Query"
+                      Value: {"IdType":2,"Id":"7a089872218b262b163f57ef21a5b17a","Namespace":36}
                     - Name: Value
                       Type: BaseDataVariableType
                       DataType: String
@@ -46191,7 +46191,7 @@ Children:
                       Type: BaseDataVariableType
                       DataType: VariablePointer
                       Description: {"NamespaceIndex":5,"TextId":"SetVariableToModifyDescription"}
-                      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Reports/Shift consumption Report/Sections/DataloggerReport/Query"
+                      Value: {"IdType":2,"Id":"7a089872218b262b163f57ef21a5b17a","Namespace":36}
                     - Name: Value
                       Type: BaseDataVariableType
                       DataType: String

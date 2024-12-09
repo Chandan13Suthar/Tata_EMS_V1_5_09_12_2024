@@ -293,6 +293,9 @@ Children:
       Type: PropertyType
       DataType: NodeId
       Value: "/Types/ObjectTypes/BaseObjectType/StyleSheet"
+  - Class: Reference
+    Target: ns=1;i=303
+    Direction: Forward
 - Name: MainWindow
   Id: g=01a7e8933afd7c95fe894b0859308138
   Supertype: Window
@@ -2050,6 +2053,9 @@ Children:
               DataType: VerticalAlignment
               ModellingRule: Optional
               Value: 2
+            - Class: Reference
+              Target: ns=7;i=1360
+              Direction: Forward
           - Name: FeaturesDemoHome
             Type: Label
             Children:
@@ -8558,6 +8564,9 @@ Children:
               DataType: VerticalAlignment
               ModellingRule: Optional
               Value: 2
+            - Class: Reference
+              Target: ns=7;i=1360
+              Direction: Forward
           - Name: FeaturesDemoHome
             Type: Label
             Children:
