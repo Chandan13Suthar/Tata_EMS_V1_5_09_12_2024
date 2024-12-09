@@ -1317,7 +1317,6 @@ Children:
   - Name: SamplingMode
     Type: PropertyType
     DataType: SamplingModeEnum
-    Value: 1
   - Name: Store
     Type: NodePointer
     DataType: NodeId

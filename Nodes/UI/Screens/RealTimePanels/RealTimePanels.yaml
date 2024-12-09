@@ -20530,7 +20530,7 @@ Children:
                   - Name: ns=5;Method
                     Type: BaseDataVariableType
                     DataType: String
-                    Value: "chillercalculation"
+                    Value: "TriggerLongRunningTask"
               - Name: EventArguments
                 Type: MouseClickEvent
                 Children:
@@ -25807,7 +25807,7 @@ Children:
                   - Name: ns=5;Method
                     Type: BaseDataVariableType
                     DataType: String
-                    Value: "compressorcalculation"
+                    Value: "TriggerLongRunningTask"
               - Name: EventArguments
                 Type: MouseClickEvent
                 Children:

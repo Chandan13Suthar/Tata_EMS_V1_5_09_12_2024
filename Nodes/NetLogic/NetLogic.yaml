@@ -196,13 +196,13 @@ Children:
   Type: NetLogic
   Children:
   - Class: Method
-    Name: chillercalculation
+    Name: TriggerLongRunningTask
 - Name: compressor
   Id: g=df2c92d9f3f6e4af7231efd35cb9871a
   Type: NetLogic
   Children:
   - Class: Method
-    Name: compressorcalculation
+    Name: TriggerLongRunningTask
 - Name: Shiftwisedateselection
   Id: g=c1abe3423bb0ced78a043280f409609b
   Type: NetLogic
