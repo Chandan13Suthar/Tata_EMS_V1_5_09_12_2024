@@ -17,6 +17,11 @@ Children:
   Type: BaseDataVariableType
   DataType: String
   Value: "D:\\Daily_Energy_Reports\\Daily_Consumption_Report.pdf"
+- Name: Dailyconsumptionreportpath1
+  Id: g=f60f0d31aa1897d791ebfcd3d7973812
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "J:\\Daily_Energy_Reports\\Daily_Consumption_Report.pdf"
 - Name: DailyDateFrom
   Id: g=c479f73476a72b91aaeadb9df450b713
   Type: BaseDataVariableType
@@ -165,6 +170,11 @@ Children:
   Type: BaseDataVariableType
   DataType: String
   Value: "D:\\MonthlyReport\\MonthlyConsumptionReport.csv"
+- Name: Monthlyconsumptionreportpath1
+  Id: g=9092b275f686c6baa4429591ead6ffc8
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "J:\\MonthlyReport\\MonthlyConsumptionReport.csv"
 - Name: Monthlyconsumptionreportpath_As_Excel
   Id: g=818ec53a729f646df889d7098f59859c
   Type: BaseDataVariableType

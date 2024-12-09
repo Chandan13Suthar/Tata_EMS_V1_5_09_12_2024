@@ -142,11 +142,16 @@ Children:
           Type: BaseDataVariableType
           DataType: LocalizedText
           Value: {"LocaleId":"en-US","Text":"SPP"}
-- Name: Path
+- Name: AlarmPath
   Id: g=f1f54b8f86d31117149edd991faf7335
   Type: BaseDataVariableType
   DataType: String
   Value: "D:\\AlarmReport\\AlarmReport.pdf"
+- Name: AlarmPath1
+  Id: g=bf40b253c09f3ec6577e8a7c1f091889
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "J:\\AlarmReport\\AlarmReport.pdf"
 - Name: 33KVComboselection
   Type: BaseDataVariableType
   DataType: Int32
