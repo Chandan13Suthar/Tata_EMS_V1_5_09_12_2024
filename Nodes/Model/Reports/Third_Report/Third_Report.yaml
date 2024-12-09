@@ -6,6 +6,11 @@ Children:
   Type: BaseDataVariableType
   DataType: String
   Value: "D:\\ConsumptionReport\\DistributionReport.pdf"
+- Name: DistributionPath1
+  Id: g=57ab447c34960540dee5a024fc02da2f
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "J:\\ConsumptionReport\\DistributionReport.pdf"
 - Name: Date
   Id: g=2cbfda4a323c757c37f8384b5df78593
   Type: BaseDataVariableType
