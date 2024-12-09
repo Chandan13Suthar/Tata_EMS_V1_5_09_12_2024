@@ -1,0 +1,4538 @@
+Name: Model
+Type: ModelCategoryFolder
+Children:
+- File: Alarms/Alarms.yaml
+- File: Reports/Reports.yaml
+- File: MarginsForRetentivity/MarginsForRetentivity.yaml
+- File: Comparision_Dashboard/Comparision_Dashboard.yaml
+- File: Histo_Dashboard/Histo_Dashboard.yaml
+- File: Tags/Tags.yaml
+- File: DateTime/DateTime.yaml
+- Class: DataType
+  Name: DateAndTimeFormatEnum
+  Id: g=2f4be27b875cbb2fd8089da23715e36a
+  Supertype: Enumeration
+  EnumDefinition: 
+   {
+    "Name": "DateAndTimeEnum",
+    "DataType": {
+     "IdType": 2,
+     "Id": "2f4be27b875cbb2fd8089da23715e36a",
+     "Namespace": 36
+    },
+    "Fields": [{
+      "Name": "Value0",
+      "Value": 0,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Short date and time, local"
+      },
+      "Description": {
+       "LocaleId": "en-US",
+       "Text": "g"
+      }
+     },{
+      "Name": "Value1",
+      "Value": 1,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Extended date and time, local"
+      },
+      "Description": {
+       "LocaleId": "en-US",
+       "Text": "F"
+      }
+     },{
+      "Name": "Value2",
+      "Value": 2,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "ShortDateAndTime, UTC"
+      },
+      "Description": {
+       "LocaleId": "en-US",
+       "Text": "X"
+      }
+     },{
+      "Name": "Value3",
+      "Value": 3,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "ExtendedDateAndTime, UTC"
+      },
+      "Description": {
+       "LocaleId": "en-US",
+       "Text": "x"
+      }
+     },{
+      "Name": "Value4",
+      "Value": 4,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Complete Universal date and time, UTC"
+      },
+      "Description": {
+       "LocaleId": "en-US",
+       "Text": "U"
+      }
+     },{
+      "Name": "Value5",
+      "Value": 5,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Short date, local"
+      },
+      "Description": {
+       "LocaleId": "en-US",
+       "Text": "p"
+      }
+     },{
+      "Name": "Value6",
+      "Value": 6,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Extended date, local"
+      },
+      "Description": {
+       "LocaleId": "en-US",
+       "Text": "P"
+      }
+     },{
+      "Name": "Value7",
+      "Value": 7,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Short date, UTC"
+      },
+      "Description": {
+       "LocaleId": "en-US",
+       "Text": "d"
+      }
+     },{
+      "Name": "Value8",
+      "Value": 8,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Extended date, UTC"
+      },
+      "Description": {
+       "LocaleId": "en-US",
+       "Text": "D"
+      }
+     },{
+      "Name": "Value9",
+      "Value": 9,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Short time, local"
+      },
+      "Description": {
+       "LocaleId": "en-US",
+       "Text": "t"
+      }
+     },{
+      "Name": "Value10",
+      "Value": 10,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Extended time, local"
+      },
+      "Description": {
+       "LocaleId": "en-US",
+       "Text": "T"
+      }
+     },{
+      "Name": "Value11",
+      "Value": 11,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Short time, UTC"
+      },
+      "Description": {
+       "LocaleId": "en-US",
+       "Text": "h"
+      }
+     },{
+      "Name": "Value12",
+      "Value": 12,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "ExtendedTime,UTC"
+      },
+      "Description": {
+       "LocaleId": "en-US",
+       "Text": "H"
+      }
+     }]
+   }
+  Children:
+  - Name: ns=0;EnumValues
+    Type: BaseDataVariableType
+    DataType: EnumValueType
+    ModellingRule: None
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+    Value: [{"TypeId":{"Id":7594},"Body":{"Value":0,"DisplayName":{"NamespaceIndex":36,"TextId":"ShortDateTimeLocal"},"Description":{"LocaleId":"en-US","Text":"g"}}},{"TypeId":{"Id":7594},"Body":{"Value":1,"DisplayName":{"NamespaceIndex":36,"TextId":"ExtendedDateTimeLocal"},"Description":{"LocaleId":"en-US","Text":"F"}}},{"TypeId":{"Id":7594},"Body":{"Value":2,"DisplayName":{"NamespaceIndex":36,"TextId":"ShortDateTimeUtc"},"Description":{"LocaleId":"en-US","Text":"X"}}},{"TypeId":{"Id":7594},"Body":{"Value":3,"DisplayName":{"NamespaceIndex":36,"TextId":"ExtendedDateTimeUtc"},"Description":{"LocaleId":"en-US","Text":"x"}}},{"TypeId":{"Id":7594},"Body":{"Value":4,"DisplayName":{"NamespaceIndex":36,"TextId":"CompleteUniversalDateTimeUtc"},"Description":{"LocaleId":"en-US","Text":"U"}}},{"TypeId":{"Id":7594},"Body":{"Value":5,"DisplayName":{"NamespaceIndex":36,"TextId":"ShortDateLocal"},"Description":{"LocaleId":"en-US","Text":"p"}}},{"TypeId":{"Id":7594},"Body":{"Value":6,"DisplayName":{"NamespaceIndex":36,"TextId":"ExtendedDateLocal"},"Description":{"LocaleId":"en-US","Text":"P"}}},{"TypeId":{"Id":7594},"Body":{"Value":7,"DisplayName":{"NamespaceIndex":36,"TextId":"ShortDateUtc"},"Description":{"LocaleId":"en-US","Text":"d"}}},{"TypeId":{"Id":7594},"Body":{"Value":8,"DisplayName":{"NamespaceIndex":36,"TextId":"ExtendedDateUtc"},"Description":{"LocaleId":"en-US","Text":"D"}}},{"TypeId":{"Id":7594},"Body":{"Value":9,"DisplayName":{"NamespaceIndex":36,"TextId":"ShortTimeLocal"},"Description":{"LocaleId":"en-US","Text":"t"}}},{"TypeId":{"Id":7594},"Body":{"Value":10,"DisplayName":{"NamespaceIndex":36,"TextId":"ExtendedTimeLocal"},"Description":{"LocaleId":"en-US","Text":"T"}}},{"TypeId":{"Id":7594},"Body":{"Value":11,"DisplayName":{"NamespaceIndex":36,"TextId":"ShortTimeUtc"},"Description":{"LocaleId":"en-US","Text":"h"}}},{"TypeId":{"Id":7594},"Body":{"Value":12,"DisplayName":{"NamespaceIndex":36,"TextId":"ExtendedTimeUtc"},"Description":{"LocaleId":"en-US","Text":"H"}}}]
+- Class: DataType
+  Name: NumericFormatEnum
+  Id: g=4098c6effa6d407128022aa8840d787b
+  Supertype: Enumeration
+  EnumDefinition: 
+   {
+    "Name": "NumericFormatEnum",
+    "DataType": {
+     "IdType": 2,
+     "Id": "4098c6effa6d407128022aa8840d787b",
+     "Namespace": 36
+    },
+    "Fields": [{
+      "Name": "Value0",
+      "Value": 0,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Numerical, without thousands separator"
+      },
+      "Description": {
+       "LocaleId": "en-US",
+       "Text": "d"
+      }
+     },{
+      "Name": "Value1",
+      "Value": 1,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Numerical, with thousands separator"
+      },
+      "Description": {
+       "LocaleId": "en-US",
+       "Text": "n"
+      }
+     },{
+      "Name": "Value2",
+      "Value": 2,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Exponential notation"
+      },
+      "Description": {
+       "LocaleId": "en-US",
+       "Text": "e"
+      }
+     },{
+      "Name": "Value3",
+      "Value": 3,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Fixed-point notation"
+      },
+      "Description": {
+       "LocaleId": "en-US",
+       "Text": "f"
+      }
+     },{
+      "Name": "Value4",
+      "Value": 4,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Percentage"
+      },
+      "Description": {
+       "LocaleId": "en-US",
+       "Text": "p"
+      }
+     }]
+   }
+  Children:
+  - Name: ns=0;EnumValues
+    Type: BaseDataVariableType
+    DataType: EnumValueType
+    ModellingRule: None
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+    Value: [{"TypeId":{"Id":7594},"Body":{"Value":0,"DisplayName":{"NamespaceIndex":36,"TextId":"NumericalNoSeparator"},"Description":{"LocaleId":"en-US","Text":"d"}}},{"TypeId":{"Id":7594},"Body":{"Value":1,"DisplayName":{"NamespaceIndex":36,"TextId":"NumericalThousandsSeparator"},"Description":{"LocaleId":"en-US","Text":"n"}}},{"TypeId":{"Id":7594},"Body":{"Value":2,"DisplayName":{"NamespaceIndex":36,"TextId":"ExponentialNotation"},"Description":{"LocaleId":"en-US","Text":"e"}}},{"TypeId":{"Id":7594},"Body":{"Value":3,"DisplayName":{"NamespaceIndex":36,"TextId":"FixedPointNotation"},"Description":{"LocaleId":"en-US","Text":"f"}}},{"TypeId":{"Id":7594},"Body":{"Value":4,"DisplayName":{"NamespaceIndex":36,"TextId":"Percentage"},"Description":{"LocaleId":"en-US","Text":"p"}}}]
+- Class: DataType
+  Name: BinaryFormatEnum
+  Id: g=97e2eb036b97ad3c155ad99519dd7dbb
+  Supertype: Enumeration
+  EnumDefinition: 
+   {
+    "Name": "BinaryFormatEnum",
+    "DataType": {
+     "IdType": 2,
+     "Id": "97e2eb036b97ad3c155ad99519dd7dbb",
+     "Namespace": 36
+    },
+    "Fields": [{
+      "Name": "Value0",
+      "Value": 0,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Hexadecimal notation"
+      },
+      "Description": {
+       "LocaleId": "en-US",
+       "Text": "x"
+      }
+     },{
+      "Name": "Value1",
+      "Value": 1,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Binary notation"
+      },
+      "Description": {
+       "LocaleId": "en-US",
+       "Text": "b"
+      }
+     },{
+      "Name": "Value2",
+      "Value": 2,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Octal notation"
+      },
+      "Description": {
+       "LocaleId": "en-US",
+       "Text": "o"
+      }
+     }]
+   }
+  Children:
+  - Name: ns=0;EnumValues
+    Type: BaseDataVariableType
+    DataType: EnumValueType
+    ModellingRule: None
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+    Value: [{"TypeId":{"Id":7594},"Body":{"Value":0,"DisplayName":{"NamespaceIndex":36,"TextId":"HexadecimalNotation"},"Description":{"LocaleId":"en-US","Text":"x"}}},{"TypeId":{"Id":7594},"Body":{"Value":1,"DisplayName":{"NamespaceIndex":36,"TextId":"BinaryNotation"},"Description":{"LocaleId":"en-US","Text":"b"}}},{"TypeId":{"Id":7594},"Body":{"Value":2,"DisplayName":{"NamespaceIndex":36,"TextId":"OctalNotation"},"Description":{"LocaleId":"en-US","Text":"o"}}}]
+- Class: DataType
+  Name: UpperLowerFormatEnum
+  Id: g=177c91ef9223819e794c6e2b13ebbf0b
+  Supertype: Enumeration
+  EnumDefinition: 
+   {
+    "Name": "UpperLowerFormatEnum",
+    "DataType": {
+     "IdType": 2,
+     "Id": "177c91ef9223819e794c6e2b13ebbf0b",
+     "Namespace": 36
+    },
+    "Fields": [{
+      "Name": "Value0",
+      "Value": 0,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "All lowercase"
+      },
+      "Description": {
+       "LocaleId": "en-US",
+       "Text": "l"
+      }
+     },{
+      "Name": "Value1",
+      "Value": 1,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "All uppercase"
+      },
+      "Description": {
+       "LocaleId": "en-US",
+       "Text": "u"
+      }
+     },{
+      "Name": "Value2",
+      "Value": 2,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "All first letters uppercase"
+      },
+      "Description": {
+       "LocaleId": "en-US",
+       "Text": "t"
+      }
+     },{
+      "Name": "Value3",
+      "Value": 3,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Case independent"
+      },
+      "Description": {
+       "LocaleId": "en-US",
+       "Text": "f"
+      }
+     }]
+   }
+  Children:
+  - Name: ns=0;EnumValues
+    Type: BaseDataVariableType
+    DataType: EnumValueType
+    ModellingRule: None
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+    Value: [{"TypeId":{"Id":7594},"Body":{"Value":0,"DisplayName":{"NamespaceIndex":36,"TextId":"Lowercase"},"Description":{"LocaleId":"en-US","Text":"l"}}},{"TypeId":{"Id":7594},"Body":{"Value":1,"DisplayName":{"NamespaceIndex":36,"TextId":"Uppercase"},"Description":{"LocaleId":"en-US","Text":"u"}}},{"TypeId":{"Id":7594},"Body":{"Value":2,"DisplayName":{"NamespaceIndex":36,"TextId":"PascalCase"},"Description":{"LocaleId":"en-US","Text":"t"}}},{"TypeId":{"Id":7594},"Body":{"Value":3,"DisplayName":{"NamespaceIndex":36,"TextId":"CaseIndependent"},"Description":{"LocaleId":"en-US","Text":"f"}}}]
+- Class: DataType
+  Name: ZoomModeEnum
+  Id: g=7145432984a0a97b2ed75a5b73c82564
+  Supertype: Enumeration
+  EnumDefinition: 
+   {
+    "Name": "ZoomModeEnum",
+    "DataType": {
+     "IdType": 2,
+     "Id": "7145432984a0a97b2ed75a5b73c82564",
+     "Namespace": 36
+    },
+    "Fields": [{
+      "Name": "Value0",
+      "Value": 0,
+      "DisplayName": {
+       "NamespaceIndex": 36,
+       "TextId": "FitWidth"
+      }
+     },{
+      "Name": "Value1",
+      "Value": 1,
+      "DisplayName": {
+       "NamespaceIndex": 36,
+       "TextId": "FitHeight"
+      }
+     },{
+      "Name": "Value2",
+      "Value": 2,
+      "DisplayName": {
+       "NamespaceIndex": 36,
+       "TextId": "FitPage"
+      }
+     },{
+      "Name": "Value3",
+      "Value": 3,
+      "DisplayName": {
+       "NamespaceIndex": 36,
+       "TextId": "ActualSize"
+      }
+     },{
+      "Name": "Value4",
+      "Value": 4,
+      "DisplayName": {
+       "NamespaceIndex": 36,
+       "TextId": "CustomLevel"
+      }
+     }]
+   }
+  Children:
+  - Name: ns=0;EnumValues
+    Type: BaseDataVariableType
+    DataType: EnumValueType
+    ModellingRule: None
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+    Value: [{"TypeId":{"Id":7594},"Body":{"Value":0,"DisplayName":{"NamespaceIndex":36,"TextId":"FitWidth"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":1,"DisplayName":{"NamespaceIndex":36,"TextId":"FitHeight"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":2,"DisplayName":{"NamespaceIndex":36,"TextId":"FitPage"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":3,"DisplayName":{"NamespaceIndex":36,"TextId":"ActualSize"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":4,"DisplayName":{"NamespaceIndex":36,"TextId":"CustomLevel"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+- Name: Variable1
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: Variable2
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: Variable3
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: Object
+  Id: g=990df0512f7fb04cb24d5c7c25834b9d
+  Supertype: BaseObjectType
+  Children:
+  - Name: Counter
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Name
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: Value
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Incomer1Name
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "33kv"
+  - Name: Incomer2Name
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "utility"
+  - Name: Button
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Income1Value
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 10
+  - Name: Income2Value
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 20
+  - Name: RuntimeNetLogic6
+    Type: NetLogic
+  - Name: Incomer3Name
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Bodyshop"
+  - Name: Incomer4Name
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Paintshop"
+  - Name: Incomer5Name
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Pumproom"
+  - Name: Incomer3Value
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 30
+  - Name: Incomer4Value
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 40
+  - Name: Incomer5Value
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 50
+  - Name: Date
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+- Name: ObjectInstance
+  Type: Object
+  Children:
+  - Name: Counter
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Name
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: Value
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Incomer1Name
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "33kv"
+  - Name: Incomer2Name
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "utility"
+  - Name: Button
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Income1Value
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 10
+  - Name: Income2Value
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 20
+  - Name: RuntimeNetLogic6
+    Type: NetLogic
+  - Name: Incomer3Name
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Bodyshop"
+  - Name: Incomer4Name
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Paintshop"
+  - Name: Incomer5Name
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Pumproom"
+  - Name: Incomer3Value
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 30
+  - Name: Incomer4Value
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 40
+  - Name: Incomer5Value
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 50
+  - Name: Date
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+- Name: HomePageNew
+  Id: g=e202063b9b77d674d04af72a94a04c4c
+  Supertype: BaseObjectType
+  Children:
+  - Name: Target
+    Type: BaseDataVariableType
+    DataType: Float
+    Value: 1200.0
+    Children:
+    - Name: KeyValueConverter1
+      Type: ValueMapConverter
+      Children:
+      - Name: Source
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/SpinBoxValue"
+      - Name: ns=5;Pairs
+        Type: BaseObjectType
+        Children:
+        - Name: Pair
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Type: BaseDataVariableType
+            DataType: UInt32
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "33KV"
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/Target33KV"
+              Children:
+              - Name: Mode
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+        - Name: Pair1
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Value: 1
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "UTILITY"
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetUtility"
+              Children:
+              - Name: Mode
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+        - Name: Pair2
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Value: 2
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PUMPROOM"
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetAdmin"
+              Children:
+              - Name: Mode
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+        - Name: Pair3
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Value: 3
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PAINTSHOP"
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetSPP"
+              Children:
+              - Name: Mode
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+        - Name: Pair4
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Value: 4
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "BODYSHOP"
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetBodyshop"
+              Children:
+              - Name: Mode
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+        - Name: Pair5
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Value: 5
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "TCF"
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetTCF"
+              Children:
+              - Name: Mode
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+        - Name: Pair6
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Value: 6
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "STAMPING"
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetStamping"
+              Children:
+              - Name: Mode
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+        - Name: Pair7
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Value: 7
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "ADMIN"
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetPumpRoom"
+              Children:
+              - Name: Mode
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+        - Name: Pair8
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Value: 8
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "SPP"
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetPaintShop"
+              Children:
+              - Name: Mode
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+  - Name: Consumption
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: AvgPF
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: AvgFrequency
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: AvgLL
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: AvgLN
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: PF
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Frequency
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: TODConsumption
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: RuntimeNetLogic8
+    Type: NetLogic
+    Children:
+    - Class: Method
+      Name: HomePageCalculationTask
+      Id: g=950cbc7707cca53b60edd1556457fc93
+  - Name: Button
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: Date
+    Type: BaseDataVariableType
+    DataType: DateTime
+  - Name: Selection
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+    Children:
+    - Name: KeyValueConverter1
+      Type: ValueMapConverter
+      Children:
+      - Name: Source
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/SpinBoxValue"
+      - Name: ns=5;Pairs
+        Type: BaseObjectType
+        Children:
+        - Name: Pair
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Type: BaseDataVariableType
+            DataType: UInt32
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "33KV"
+        - Name: Pair1
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Value: 1
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "UTILITY"
+        - Name: Pair2
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Value: 2
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "ADMIN"
+        - Name: Pair3
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Value: 3
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "SPP"
+        - Name: Pair4
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Value: 4
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "BODYSHOP"
+        - Name: Pair5
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Value: 5
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "TCF"
+        - Name: Pair6
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Value: 6
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "STAMPING"
+        - Name: Pair7
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Value: 7
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PAINTSHOP"
+        - Name: Pair8
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Value: 8
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PUMPROOM"
+  - Name: Day1
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day2
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day3
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day4
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day5
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day6
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day7
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day8
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day9
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day10
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day11
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day12
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day13
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day14
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day15
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day16
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day17
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day18
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day19
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day20
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day21
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day22
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day23
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day24
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day25
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day26
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day27
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day28
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day29
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day30
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day31
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: RefreshB
+    Type: BaseDataVariableType
+    DataType: Int32
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/RefreshHomePage"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: Power
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Current
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: RefreshB1
+    Type: BaseDataVariableType
+    DataType: Int32
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/RefreshHomePage1"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+- Name: HomePageNewInstance
+  Type: HomePageNew
+  Children:
+  - Name: Target
+    Type: BaseDataVariableType
+    DataType: Float
+    Value: 1200.0
+    Children:
+    - Name: KeyValueConverter1
+      Type: ValueMapConverter
+      Children:
+      - Name: Source
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/SpinBoxValue"
+      - Name: Pairs
+        Type: BaseObjectType
+        Children:
+        - Name: Pair
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Type: BaseDataVariableType
+            DataType: UInt32
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "33KV"
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/Target33KV"
+        - Name: Pair1
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Value: 1
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "UTILITY"
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetUtility"
+        - Name: Pair2
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Value: 2
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PUMPROOM"
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetAdmin"
+        - Name: Pair3
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Value: 3
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PAINTSHOP"
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetSPP"
+        - Name: Pair4
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Value: 4
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "BODYSHOP"
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetBodyshop"
+        - Name: Pair5
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Value: 5
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "TCF"
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetTCF"
+        - Name: Pair6
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Value: 6
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "STAMPING"
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetStamping"
+        - Name: Pair7
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Value: 7
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "ADMIN"
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetPumpRoom"
+        - Name: Pair8
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Value: 8
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "SPP"
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetPaintShop"
+  - Name: Consumption
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: AvgPF
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: AvgFrequency
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: AvgLL
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: AvgLN
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: PF
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Frequency
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: TODConsumption
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: RuntimeNetLogic8
+    Id: g=488ca03b45cca5eb704461af9d743920
+    Type: NetLogic
+    Children:
+    - Class: Reference
+      Target: g=950cbc7707cca53b60edd1556457fc93
+      Direction: Forward
+  - Name: Button
+    Id: g=11493ac115971671857bc75b8a9b8182
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: Date
+    Type: BaseDataVariableType
+    DataType: DateTime
+  - Name: Selection
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+    Children:
+    - Name: KeyValueConverter1
+      Type: ValueMapConverter
+      Children:
+      - Name: Source
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/SpinBoxValue"
+      - Name: Pairs
+        Type: BaseObjectType
+        Children:
+        - Name: Pair
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Type: BaseDataVariableType
+            DataType: UInt32
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "33KV"
+        - Name: Pair1
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Value: 1
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "UTILITY"
+        - Name: Pair2
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Value: 2
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "ADMIN"
+        - Name: Pair3
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Value: 3
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "SPP"
+        - Name: Pair4
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Value: 4
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "BODYSHOP"
+        - Name: Pair5
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Value: 5
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "TCF"
+        - Name: Pair6
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Value: 6
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "STAMPING"
+        - Name: Pair7
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Value: 7
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PAINTSHOP"
+        - Name: Pair8
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Value: 8
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PUMPROOM"
+  - Name: Day1
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day2
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day3
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day4
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day5
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day6
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day7
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day8
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day9
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day10
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day11
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day12
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day13
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day14
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day15
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day16
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day17
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day18
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day19
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day20
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day21
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day22
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day23
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day24
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day25
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day26
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day27
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day28
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day29
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day30
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Day31
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: RefreshB
+    Type: BaseDataVariableType
+    DataType: Int32
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/RefreshHomePage"
+  - Name: Power
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Current
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: RefreshB1
+    Type: BaseDataVariableType
+    DataType: Int32
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/RefreshHomePage1"
+- Name: HomePageComparisionPanel
+  Id: g=4130c04dc48e2f4b6a05645c7d2b48e1
+  Supertype: BaseObjectType
+  Children:
+  - Name: Date
+    Type: BaseDataVariableType
+    DataType: DateTime
+  - Name: Target
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 2500
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetUtility"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: Yearlowest
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Monthlowest
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Average
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Consumption
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: GBUTTON
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: JaceStamping
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetStamping
+    Type: BaseDataVariableType
+    DataType: Int32
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetStamping"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: YearlowestStamping
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestStamping
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AverageStamping
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionStamping
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: JaceTcf
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetTcf
+    Type: BaseDataVariableType
+    DataType: Int32
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetTCF"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: MonthlowestTcf
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: YearlowestTcf
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AverageTcf
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionTcf
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: JaceBodyshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetBodyshop
+    Type: BaseDataVariableType
+    DataType: Int32
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetBodyshop"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: YearlowestBodyshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestBodyshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AverageBodyshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionBodyshop
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: JaceEngineshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetEngineshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: YearlowestEngineshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestEngineshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AverageEngineshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionEngineshop
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: JacePaintshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetPaintshop
+    Type: BaseDataVariableType
+    DataType: Int32
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetPaintShop"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: YearlowestPaintshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestPaintshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AveragePaintshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: JaceSpp
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetSpp
+    Type: BaseDataVariableType
+    DataType: Int32
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetSPP"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: YearlowestSpp
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestSpp
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AverageSpp
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionSpp
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: JaceSpare
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetSpare
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: YearlowestSpare
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestSpare
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AverageSpare
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionSpare
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Jace33KV
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Target33KV
+    Type: BaseDataVariableType
+    DataType: Int32
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/Target33KV"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: Yearlowest33KV
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Monthlowest33KV
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Average33KV
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Consumption33KV
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Utilitypercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Stampingpercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Bodyshoppercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Engineshoppercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Paintshoppercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Spppercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Sparepercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Tcfpercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Monthyear
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: Year
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: Date1
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: ConsumptionPaintshop
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: HomePageComparisionLogic
+    Type: NetLogic
+    Children:
+    - Class: Method
+      Name: IncrementDecrementTask
+      Id: g=381c11abdcadd0b4792aedb67976b4fa
+  - Name: Jace
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Meter
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ProductionCount
+    Type: BaseDataVariableType
+    DataType: Int32
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Datalogtag/ProductionCount"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: MonthConsumption
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: KV33Power
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: UtilityPower
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: BodyshopPower
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: StampingPower
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: AdminPower
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: PaintshopPower
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: SppPower
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: TcfPower
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: TcfPower1
+    Type: BaseDataVariableType
+    DataType: Float
+- Name: HomePageComparisionPanelInstance
+  Type: HomePageComparisionPanel
+  Children:
+  - Name: Date
+    Type: BaseDataVariableType
+    DataType: DateTime
+  - Name: Target
+    Type: BaseDataVariableType
+    DataType: Int32
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../HomePageHistogram/HomePage2/PRoduction_And_Target/TargetUtility"
+  - Name: Yearlowest
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Monthlowest
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Average
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Consumption
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: GBUTTON
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: JaceStamping
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetStamping
+    Type: BaseDataVariableType
+    DataType: Int32
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetStamping"
+  - Name: YearlowestStamping
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestStamping
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AverageStamping
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionStamping
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: JaceTcf
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetTcf
+    Type: BaseDataVariableType
+    DataType: Int32
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetTCF"
+  - Name: MonthlowestTcf
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: YearlowestTcf
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AverageTcf
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionTcf
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: JaceBodyshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetBodyshop
+    Type: BaseDataVariableType
+    DataType: Int32
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetBodyshop"
+  - Name: YearlowestBodyshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestBodyshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AverageBodyshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionBodyshop
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: JaceEngineshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetEngineshop
+    Type: BaseDataVariableType
+    DataType: Int32
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../HomePageHistogram/HomePage2/PRoduction_And_Target/TargetAdmin"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: YearlowestEngineshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestEngineshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AverageEngineshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionEngineshop
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: JacePaintshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetPaintshop
+    Type: BaseDataVariableType
+    DataType: Int32
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetPaintShop"
+  - Name: YearlowestPaintshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestPaintshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AveragePaintshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: JaceSpp
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetSpp
+    Type: BaseDataVariableType
+    DataType: Int32
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetSPP"
+  - Name: YearlowestSpp
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestSpp
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AverageSpp
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionSpp
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: JaceSpare
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetSpare
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: YearlowestSpare
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestSpare
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AverageSpare
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionSpare
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Jace33KV
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Target33KV
+    Type: BaseDataVariableType
+    DataType: Int32
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/Target33KV"
+  - Name: Yearlowest33KV
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Monthlowest33KV
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Average33KV
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Consumption33KV
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Utilitypercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Stampingpercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Bodyshoppercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Engineshoppercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Paintshoppercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Spppercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Sparepercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Tcfpercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Monthyear
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: Year
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: Date1
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: ConsumptionPaintshop
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: HomePageComparisionLogic
+    Id: g=e3f43b47187a5d1786ef9d72221692c8
+    Type: NetLogic
+    Children:
+    - Class: Reference
+      Target: g=381c11abdcadd0b4792aedb67976b4fa
+      Direction: Forward
+  - Name: Jace
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Meter
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ProductionCount
+    Type: BaseDataVariableType
+    DataType: Int32
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Datalogtag/ProductionCount"
+  - Name: MonthConsumption
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: KV33Power
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: UtilityPower
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: BodyshopPower
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: StampingPower
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: AdminPower
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: PaintshopPower
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: SppPower
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: TcfPower
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: TcfPower1
+    Type: BaseDataVariableType
+    DataType: Float
+- Name: ComparisionInstance
+  Type: Comparision
+  Children:
+  - Name: RuntimeNetLogic2
+    Id: g=f87e829e0b403b68c972977107e56717
+    Type: NetLogic
+    Children:
+    - Class: Reference
+      Target: g=39d14253f396fe0ffbe1d2bedc6003b4
+      Direction: Forward
+  - Name: Date
+    Type: BaseDataVariableType
+    DataType: DateTime
+    Children:
+    - Name: DynamicLink1
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../Reports/Third Report/Date"
+  - Name: Target
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Yearlowest
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Monthlowest
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Average
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Consumption
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: GBUTTON
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: JaceStamping
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetStamping
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: YearlowestStamping
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestStamping
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AverageStamping
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionStamping
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: JaceTcf
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetTcf
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: YearlowestTcf
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestTcf
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AverageTcf
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionTcf
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: JaceBodyshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetBodyshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: YearlowestBodyshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestBodyshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AverageBodyshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionBodyshop
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: JaceEngineshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetEngineshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: YearlowestEngineshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestEngineshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AverageEngineshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionEngineshop
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: JacePaintshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetPaintshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: YearlowestPaintshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestPaintshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AveragePaintshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionPaintshop
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: JaceSpp
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetSpp
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: YearlowestSpp
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestSpp
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AverageSpp
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionSpp
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: JaceSpare
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetSpare
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: YearlowestSpare
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestSpare
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AverageSpare
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionSpare
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Jace33KV
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Target33KV
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Yearlowest33KV
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Monthlowest33KV
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Average33KV
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Consumption33KV
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Utilitypercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Stampingpercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Bodyshoppercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Engineshoppercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Paintshoppercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Spppercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Sparepercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Tcfpercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: INFO
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: Monthyear
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: Year
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: Date1
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: Test
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: Test1
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: JaceUti
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MeterUti
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: KV33ApparentPowerTotal
+    Type: BaseDataVariableType
+    DataType: Float
+    Value: 1.0
+  - Name: UtilityApparentPowerTotal
+    Type: BaseDataVariableType
+    DataType: Float
+    Value: 1.0
+  - Name: AdminApparentPowerTotal
+    Type: BaseDataVariableType
+    DataType: Float
+    Value: 1.0
+  - Name: SppApparentPowerTotal
+    Type: BaseDataVariableType
+    DataType: Float
+    Value: 1.0
+  - Name: BodyShopApparentPowerTotal
+    Type: BaseDataVariableType
+    DataType: Float
+    Value: 1.0
+  - Name: TCFApparentPowerTotal
+    Type: BaseDataVariableType
+    DataType: Float
+    Value: 1.0
+  - Name: StampingApparentPowerTotal
+    Type: BaseDataVariableType
+    DataType: Float
+    Value: 1.0
+  - Name: PaintshopApparentPowerTotal
+    Type: BaseDataVariableType
+    DataType: Float
+    Value: 1.0
+- Name: Comparision
+  Id: g=8d89a5fce1435f2e42dcb0f1e89bcaab
+  Supertype: BaseObjectType
+  Children:
+  - Name: RuntimeNetLogic2
+    Type: NetLogic
+    Children:
+    - Class: Method
+      Name: IncrementDecrementTask
+      Id: g=39d14253f396fe0ffbe1d2bedc6003b4
+  - Name: Date
+    Type: BaseDataVariableType
+    DataType: DateTime
+    Children:
+    - Name: DynamicLink1
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../Reports/Third Report/Date"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: Target
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Yearlowest
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Monthlowest
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Average
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Consumption
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: GBUTTON
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: JaceStamping
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetStamping
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: YearlowestStamping
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestStamping
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AverageStamping
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionStamping
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: JaceTcf
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetTcf
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: YearlowestTcf
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestTcf
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AverageTcf
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionTcf
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: JaceBodyshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetBodyshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: YearlowestBodyshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestBodyshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AverageBodyshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionBodyshop
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: JaceEngineshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetEngineshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: YearlowestEngineshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestEngineshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AverageEngineshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionEngineshop
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: JacePaintshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetPaintshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: YearlowestPaintshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestPaintshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AveragePaintshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionPaintshop
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: JaceSpp
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetSpp
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: YearlowestSpp
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestSpp
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AverageSpp
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionSpp
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: JaceSpare
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetSpare
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: YearlowestSpare
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestSpare
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AverageSpare
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionSpare
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Jace33KV
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Target33KV
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Yearlowest33KV
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Monthlowest33KV
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Average33KV
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Consumption33KV
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Utilitypercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Stampingpercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Bodyshoppercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Engineshoppercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Paintshoppercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Spppercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Sparepercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Tcfpercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: INFO
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: Monthyear
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: Year
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: Date1
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: Test
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: Test1
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: JaceUti
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MeterUti
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: KV33ApparentPowerTotal
+    Type: BaseDataVariableType
+    DataType: Float
+    Value: 1.0
+  - Name: UtilityApparentPowerTotal
+    Type: BaseDataVariableType
+    DataType: Float
+    Value: 1.0
+  - Name: AdminApparentPowerTotal
+    Type: BaseDataVariableType
+    DataType: Float
+    Value: 1.0
+  - Name: SppApparentPowerTotal
+    Type: BaseDataVariableType
+    DataType: Float
+    Value: 1.0
+  - Name: BodyShopApparentPowerTotal
+    Type: BaseDataVariableType
+    DataType: Float
+    Value: 1.0
+  - Name: TCFApparentPowerTotal
+    Type: BaseDataVariableType
+    DataType: Float
+    Value: 1.0
+  - Name: StampingApparentPowerTotal
+    Type: BaseDataVariableType
+    DataType: Float
+    Value: 1.0
+  - Name: PaintshopApparentPowerTotal
+    Type: BaseDataVariableType
+    DataType: Float
+    Value: 1.0
+- Name: HistoDashboardInstance
+  Type: HistoDashboard
+  Children:
+  - Name: Datefrom
+    Type: BaseDataVariableType
+    DataType: DateString
+    Value: "Jan 1, 1601, 12:00:00 AM"
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../Histo Dashboard/Datefrom"
+  - Name: Jace
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Histo Dashboard/JaceSelected"
+  - Name: Meter
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+    Children:
+    - Name: DynamicLink1
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Histo Dashboard/Meterselected"
+  - Name: Maxconsumption
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Minconsumption
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Avgpf
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Avgfrequency
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Consumption
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Dateto
+    Type: BaseDataVariableType
+    DataType: DateString
+    Value: "Jan 1, 1601, 12:00:00 AM"
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../Histo Dashboard/Dateto"
+  - Name: Button
+    Id: g=fbe552d5acaa8716ab56aba67b3fcc83
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: RuntimeNetLogic1
+    Id: g=9dc95a69eb3215c099d4cdac4edfad39
+    Type: NetLogic
+    Children:
+    - Class: Reference
+      Target: g=d8f79188239c9a1aabae239841701c01
+      Direction: Forward
+  - Name: Button1
+    Id: g=a51c0b08cd2a847ed21756e52b499792
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: INFO
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"For Histo Dashboard"}
+  - Name: TimeRange
+    Type: BaseDataVariableType
+    DataType: Duration
+    Value: "0:23:59:59.0000000"
+  - Name: Duration
+    Type: BaseDataVariableType
+    DataType: Duration
+    Value: "0:00:24:00.0000000"
+  - Name: Dateto1
+    Type: BaseDataVariableType
+    DataType: DateTime
+  - Name: Datefrom1
+    Type: BaseDataVariableType
+    DataType: DateTime
+- Name: HistoDashboard
+  Id: g=c92c97590d04d0688370490fb5310e7b
+  Supertype: BaseObjectType
+  Children:
+  - Name: Datefrom
+    Type: BaseDataVariableType
+    DataType: DateString
+    Value: "Jan 1, 1601, 12:00:00 AM"
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../Histo Dashboard/Datefrom"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: Jace
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Histo Dashboard/JaceSelected"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: Meter
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+    Children:
+    - Name: DynamicLink1
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Histo Dashboard/Meterselected"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: Maxconsumption
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Minconsumption
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Avgpf
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Avgfrequency
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Consumption
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Dateto
+    Type: BaseDataVariableType
+    DataType: DateString
+    Value: "Jan 1, 1601, 12:00:00 AM"
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../Histo Dashboard/Dateto"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: Button
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: RuntimeNetLogic1
+    Type: NetLogic
+    Children:
+    - Class: Method
+      Name: IncrementDecrementTask
+      Id: g=d8f79188239c9a1aabae239841701c01
+  - Name: Button1
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: INFO
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"For Histo Dashboard"}
+  - Name: TimeRange
+    Type: BaseDataVariableType
+    DataType: Duration
+    Value: "0:23:59:59.0000000"
+  - Name: Duration
+    Type: BaseDataVariableType
+    DataType: Duration
+  - Name: Dateto1
+    Type: BaseDataVariableType
+    DataType: DateTime
+  - Name: Datefrom1
+    Type: BaseDataVariableType
+    DataType: DateTime
+- Name: ComparisionDashboardInstance
+  Type: ComparisionDashboard
+  Children:
+  - Name: Datefrom
+    Type: BaseDataVariableType
+    DataType: DateTime
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../Comparision_Dashboard/Datefrom"
+  - Name: Dateto
+    Type: BaseDataVariableType
+    DataType: DateTime
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../Comparision_Dashboard/Dateto"
+  - Name: Maxconsumption1
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Maxconsumption2
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Minconsumption1
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Minconsumption2
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Avgpf1
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Avgpf2
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Avgfrequency1
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Avgfrequency2
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Consumption1
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Consumption2
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Jace1
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../Comparision_Dashboard/Jaceselected1"
+  - Name: Jace2
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../Comparision_Dashboard/Jaceselected2"
+  - Name: Meter1
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../Comparision_Dashboard/Meterselected1"
+  - Name: Meter2
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../Comparision_Dashboard/Meterselected2"
+  - Name: RuntimeNetLogic3
+    Id: g=fac1ceb4fb33915f0fc0f7017d902c0e
+    Type: NetLogic
+    Children:
+    - Class: Reference
+      Target: g=8d1bb5759cbafa02704aeb8f9d8ae843
+      Direction: Forward
+  - Name: Button1
+    Id: g=38a10a43aac2311dc5b7fa005d236e05
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: Button2
+    Id: g=a86e72cf2d95a23f86d1b9eb925c35b3
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: INFO
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"For Comparision Dashboard"}
+  - Name: TimeRange
+    Type: BaseDataVariableType
+    DataType: Duration
+    Value: "0:23:59:59.0000000"
+  - Name: Datefrom1
+    Type: BaseDataVariableType
+    DataType: DateTime
+  - Name: Dateto1
+    Type: BaseDataVariableType
+    DataType: DateTime
+- Name: ComparisionDashboard
+  Id: g=0da78a672ae27b69ae302ef010613bd3
+  Supertype: BaseObjectType
+  Children:
+  - Name: Datefrom
+    Type: BaseDataVariableType
+    DataType: DateTime
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../Comparision_Dashboard/Datefrom"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: Dateto
+    Type: BaseDataVariableType
+    DataType: DateTime
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../Comparision_Dashboard/Dateto"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: Maxconsumption1
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Maxconsumption2
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Minconsumption1
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Minconsumption2
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Avgpf1
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Avgpf2
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Avgfrequency1
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Avgfrequency2
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Consumption1
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Consumption2
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Jace1
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../Comparision_Dashboard/Jaceselected1"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: Jace2
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../Comparision_Dashboard/Jaceselected2"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: Meter1
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../Comparision_Dashboard/Meterselected1"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: Meter2
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../Comparision_Dashboard/Meterselected2"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: RuntimeNetLogic3
+    Type: NetLogic
+    Children:
+    - Class: Method
+      Name: IncrementDecrementTask
+      Id: g=8d1bb5759cbafa02704aeb8f9d8ae843
+  - Name: Button1
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: Button2
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: INFO
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"For Comparision Dashboard"}
+  - Name: TimeRange
+    Type: BaseDataVariableType
+    DataType: Duration
+    Value: "0:23:59:59.0000000"
+  - Name: Datefrom1
+    Type: BaseDataVariableType
+    DataType: DateTime
+  - Name: Dateto1
+    Type: BaseDataVariableType
+    DataType: DateTime
+- File: Importer/Importer.yaml
+- Name: ButtonGenerator
+  Type: BaseDataVariableType
+  DataType: Boolean
+- File: Datalogtag/Datalogtag.yaml
+- Name: AlarmGrid_FilterArea
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "SELECT * FROM Model WHERE Area NOT LIKE '99999'"
+- Name: Test Alarm
+  Type: BaseDataVariableType
+  DataType: Int32
+  Value: 250
+- Name: Chandan
+  Type: BaseDataVariableType
+  DataType: Float
+  Children:
+  - Name: KeyValueConverter1
+    Type: ValueMapConverter
+    Children:
+    - Name: Source
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../ObjectInstance/Counter"
+    - Name: ns=5;Pairs
+      Type: BaseObjectType
+      Children:
+      - Name: Pair
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Float
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../../CommDrivers/33KVmeters/MicroControllerStation1/Tags/demo_tag[3]"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+      - Name: Pair1
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 1
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Float
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../../CommDrivers/33KVmeters/MicroControllerStation1/Tags/demo_tag[23]"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+      - Name: Pair2
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 2
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Float
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../../CommDrivers/33KVmeters/MicroControllerStation1/Tags/demo_tag[43]"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+      - Name: Pair3
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 3
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Float
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../../../../CommDrivers/MicroControllerDriver1/MicroControllerStation1/Tags/demo_tag[63]"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+      - Name: Pair4
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 4
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Float
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../../../../CommDrivers/MicroControllerDriver1/MicroControllerStation1/Tags/demo_tag[83]"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+      - Name: Pair5
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 5
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Float
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../../../../CommDrivers/MicroControllerDriver1/MicroControllerStation1/Tags/demo_tag[103]"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+      - Name: Pair6
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 6
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Float
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../../../../CommDrivers/MicroControllerDriver1/MicroControllerStation1/Tags/demo_tag[123]"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+      - Name: Pair7
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 7
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Float
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../../../../CommDrivers/MicroControllerDriver1/MicroControllerStation1/Tags/demo_tag[143]"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+      - Name: Pair8
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 8
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Float
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../../../../CommDrivers/MicroControllerDriver1/MicroControllerStation1/Tags/demo_tag[163]"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+      - Name: Pair9
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 9
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Float
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../../../../CommDrivers/MicroControllerDriver1/MicroControllerStation1/Tags/demo_tag[183]"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+      - Name: Pair10
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 10
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Float
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../../../../CommDrivers/MicroControllerDriver1/MicroControllerStation1/Tags/demo_tag[203]"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+      - Name: Pair11
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 11
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Float
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../../../../CommDrivers/MicroControllerDriver1/MicroControllerStation1/Tags/demo_tag[223]"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+      - Name: Pair12
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 12
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Float
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../../../../CommDrivers/MicroControllerDriver1/MicroControllerStation1/Tags/demo_tag[243]"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+      - Name: Pair13
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 13
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Float
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../../../../CommDrivers/MicroControllerDriver1/MicroControllerStation1/Tags/demo_tag[263]"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+      - Name: Pair14
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 14
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Float
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../../../../CommDrivers/MicroControllerDriver1/MicroControllerStation1/Tags/demo_tag[283]"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+      - Name: Pair15
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 15
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Float
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../../../../CommDrivers/MicroControllerDriver1/MicroControllerStation1/Tags/demo_tag[303]"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+      - Name: Pair16
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 16
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Float
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../../../../CommDrivers/MicroControllerDriver1/MicroControllerStation1/Tags/demo_tag[323]"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+      - Name: Pair17
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 17
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Float
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../../../../CommDrivers/MicroControllerDriver1/MicroControllerStation1/Tags/demo_tag[343]"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+      - Name: Pair18
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 18
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Float
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../../../../CommDrivers/MicroControllerDriver1/MicroControllerStation1/Tags/demo_tag[363]"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+      - Name: Pair19
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 19
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Float
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../../../../CommDrivers/MicroControllerDriver1/MicroControllerStation1/Tags/demo_tag[383]"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+- File: Retain_Variable/Retain_Variable.yaml
+- File: HistoDashboardResult/HistoDashboardResult.yaml
+- File: HomePageHistogram/HomePageHistogram.yaml
+- File: HomePageHistochart/HomePageHistochart.yaml
+- File: HomePageHistochartText/HomePageHistochartText.yaml
+- File: ConsumptionDistribution/ConsumptionDistribution.yaml
+- Name: AutoLogOutTrigger
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: MonthConsumptionINT
+  Type: BaseDataVariableType
+  DataType: Int32
+  Children:
+  - Name: StringFormatter1
+    Type: StringFormatter
+    Children:
+    - Name: Format
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ReferenceType: HasParameter
+      Value: {"LocaleId":"en-US","Text":"{0}"}
+    - Name: ns=5;Source0
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: StringFormatter1
+        Type: StringFormatter
+        Children:
+        - Name: Format
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ReferenceType: HasParameter
+          Value: {"LocaleId":"","Text":"{0:f1}"}
+        - Name: ns=5;Source0
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../HomePageTagsInstance/MonthConsumption"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+        - Name: Mode
+          Type: PropertyType
+          DataType: DynamicLinkMode
+          ReferenceType: HasComponent
+          Value: 2
+    - Name: Mode
+      Type: PropertyType
+      DataType: DynamicLinkMode
+      ReferenceType: HasComponent
+      Value: 2
+- Name: ConsumptionDistributionReportLogic
+  Id: g=ef167c95acf1ee4a1aa8a8b32a939316
+  Supertype: BaseObjectType
+  Children:
+  - Name: Date
+    Type: BaseDataVariableType
+    DataType: DateTime
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/Third Report/Date1"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: Target
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Yearlowest
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Monthlowest
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Average
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Consumption
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: GBUTTON
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: JaceStamping
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetStamping
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: YearlowestStamping
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestStamping
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AverageStamping
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionStamping
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: JaceTcf
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetTcf
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: YearlowestTcf
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestTcf
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AverageTcf
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionTcf
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: JaceBodyshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetBodyshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: YearlowestBodyshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestBodyshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AverageBodyshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionBodyshop
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: JaceEngineshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetEngineshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: YearlowestEngineshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestEngineshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AverageEngineshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionEngineshop
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: JacePaintshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetPaintshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: YearlowestPaintshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestPaintshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AveragePaintshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionPaintshop
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: JaceSpp
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetSpp
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: YearlowestSpp
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestSpp
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionSpp
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: JaceSpare
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetSpare
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: YearlowestSpare
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestSpare
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AverageSpare
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionSpare
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Jace33KV
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Target33KV
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Yearlowest33KV
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Monthlowest33KV
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Average33KV
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Consumption33KV
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Utilitypercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Stampingpercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Bodyshoppercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Engineshoppercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Paintshoppercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Spppercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Sparepercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Tcfpercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: INFO
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: Monthyear
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: Year
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: Date1
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: Test
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: Test1
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: RuntimeLogicConsumption
+    Type: NetLogic
+    Children:
+    - Class: Method
+      Name: IncrementDecrementTask
+      Id: g=7748cbfa92fd323faa80ea5a181de86d
+  - Name: AverageSpp
+    Type: BaseDataVariableType
+    DataType: Int32
+- Name: ConsumptionDistributionReportLogicInstance
+  Type: ConsumptionDistributionReportLogic
+  Children:
+  - Name: Date
+    Type: BaseDataVariableType
+    DataType: DateTime
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/Third Report/Date1"
+  - Name: Target
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Yearlowest
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Monthlowest
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Average
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Consumption
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: GBUTTON
+    Id: g=c9f44c7ba3a85c77a10fc30d96f3f2a8
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: JaceStamping
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetStamping
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: YearlowestStamping
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestStamping
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AverageStamping
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionStamping
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: JaceTcf
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetTcf
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: YearlowestTcf
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestTcf
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AverageTcf
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionTcf
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: JaceBodyshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetBodyshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: YearlowestBodyshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestBodyshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AverageBodyshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionBodyshop
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: JaceEngineshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetEngineshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: YearlowestEngineshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestEngineshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AverageEngineshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionEngineshop
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: JacePaintshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetPaintshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: YearlowestPaintshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestPaintshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AveragePaintshop
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionPaintshop
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: JaceSpp
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetSpp
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: YearlowestSpp
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestSpp
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionSpp
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: JaceSpare
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: TargetSpare
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: YearlowestSpare
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MonthlowestSpare
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AverageSpare
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: ConsumptionSpare
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Jace33KV
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Target33KV
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Yearlowest33KV
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Monthlowest33KV
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Average33KV
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Consumption33KV
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Utilitypercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Stampingpercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Bodyshoppercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Engineshoppercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Paintshoppercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Spppercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Sparepercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Tcfpercentage
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: INFO
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: Monthyear
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: Year
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: Date1
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: Test
+    Id: g=fbc093b2142a866f8e0372c2db057385
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: Test1
+    Id: g=deebc843f584fb69774e35fbffab8f84
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: RuntimeLogicConsumption
+    Id: g=31e9aad97839308fbb99d157bd748c7a
+    Type: NetLogic
+    Children:
+    - Class: Reference
+      Target: g=7748cbfa92fd323faa80ea5a181de86d
+      Direction: Forward
+  - Name: AverageSpp
+    Type: BaseDataVariableType
+    DataType: Int32
+- Name: ProductionCount1Instance
+  Type: ProductionCount1
+  Children:
+  - Name: ProductionCount
+    Type: BaseDataVariableType
+    DataType: Int32
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Datalogtag/ProductionCount"
+  - Name: RuntimeNetLogic9
+    Id: g=9fb1e0a651fb98e361af0a9882bfda1c
+    Type: NetLogic
+    Children:
+    - Class: Reference
+      Target: g=bf4274e1e846023b7db9b730af713bc4
+      Direction: Forward
+  - Name: Button
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: Target
+    Type: BaseDataVariableType
+    DataType: Float
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/Target"
+  - Name: TargetStamping
+    Type: BaseDataVariableType
+    DataType: Float
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetStamping"
+  - Name: TargetTcf
+    Type: BaseDataVariableType
+    DataType: Float
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetTCF"
+  - Name: TargetBodyshop
+    Type: BaseDataVariableType
+    DataType: Float
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetBodyshop"
+  - Name: TargetEngineshop
+    Type: BaseDataVariableType
+    DataType: Float
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetAdmin"
+  - Name: TargetPaintshop
+    Type: BaseDataVariableType
+    DataType: Float
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetPaintShop"
+  - Name: TargetSpp
+    Type: BaseDataVariableType
+    DataType: Float
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetSPP"
+  - Name: TargetSpare
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Target33KV
+    Type: BaseDataVariableType
+    DataType: Float
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/Target33KV"
+- Name: ProductionCount1
+  Id: g=7586f0fb6d26a6c03f9ad3dbb8b406e8
+  Supertype: BaseObjectType
+  Children:
+  - Name: ProductionCount
+    Type: BaseDataVariableType
+    DataType: Int32
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Datalogtag/ProductionCount"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: RuntimeNetLogic9
+    Type: NetLogic
+    Children:
+    - Class: Method
+      Name: IncrementDecrementTask
+      Id: g=bf4274e1e846023b7db9b730af713bc4
+  - Name: Button
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Target
+    Type: BaseDataVariableType
+    DataType: Float
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/Target"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: TargetStamping
+    Type: BaseDataVariableType
+    DataType: Float
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetStamping"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: TargetTcf
+    Type: BaseDataVariableType
+    DataType: Float
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetTCF"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: TargetBodyshop
+    Type: BaseDataVariableType
+    DataType: Float
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetBodyshop"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: TargetEngineshop
+    Type: BaseDataVariableType
+    DataType: Float
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetAdmin"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: TargetPaintshop
+    Type: BaseDataVariableType
+    DataType: Float
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetPaintShop"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: TargetSpp
+    Type: BaseDataVariableType
+    DataType: Float
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetSPP"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: TargetSpare
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Target33KV
+    Type: BaseDataVariableType
+    DataType: Float
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/Target33KV"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+- Name: Panel_Meter_Selection_For_Graph
+  Id: g=899bd5a9b60a4b769f6d1e4b5ac01085
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "0"
+- Name: EnergyPanel_DateTime_Selection
+  Type: BaseDataVariableType
+  DataType: DateTime
+  Value: "2024-01-01T00:00:00.0000000"
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../NetLogic/ClockLogic/TodayDate"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: VoltagePanel_DateTime_Selection
+  Type: BaseDataVariableType
+  DataType: DateTime
+  Value: "2024-01-01T00:00:00.0000000"
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../NetLogic/ClockLogic/TodayDate"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Current_Panel_DateTime_Selection
+  Type: BaseDataVariableType
+  DataType: DateTime
+  Value: "2024-01-01T00:00:00.0000000"
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../NetLogic/ClockLogic/TodayDate"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Power_Panel_DateTime_Selection1
+  Type: BaseDataVariableType
+  DataType: DateTime
+  Value: "2024-01-01T00:00:00.0000000"
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../NetLogic/ClockLogic/TodayDate"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: RefreshHomePage
+  Id: g=1130d3dc53f371d5c3d21b5ee65691bd
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: Screen_No
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: JaceName
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "0"
+  Children:
+  - Name: KeyValueConverter1
+    Type: ValueMapConverter
+    Children:
+    - Name: Source
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../HomePageHistogram/HomePage2/SpinBoxValue"
+    - Name: ns=5;Pairs
+      Type: BaseObjectType
+      Children:
+      - Name: Pair
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "33KV"
+      - Name: Pair1
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 1
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "UTILITY"
+      - Name: Pair2
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 2
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "ADMIN"
+      - Name: Pair3
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 3
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "SPP"
+      - Name: Pair4
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 4
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "BODYSHOP"
+      - Name: Pair5
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 5
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "TCF"
+      - Name: Pair6
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 6
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "STAMPING"
+      - Name: Pair7
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 7
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PUMPROOM"
+      - Name: Pair8
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 8
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PAINTSHOP"
+- Name: Timestamp
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "\"Timestamp\""
+- File: HomePageJaceWisePanel/HomePageJaceWisePanel.yaml
+- File: Screen_Management/Screen_Management.yaml
+- Name: ReportPanelVisibility
+  Id: g=b7de07eb98a941da3c552a0243677a02
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: Generatepara
+  Type: BaseDataVariableType
+  DataType: String
+- File: Compressor/Compressor.yaml
+- Name: LastUpdateTime
+  Id: g=a27657c13a26065f09b3231c847dd4d1
+  Type: BaseDataVariableType
+  DataType: DateTime
+  Value: "2024-11-08T00:00:00.0000000"
+- Name: RefreshHomePage1
+  Id: g=805421fdeabf677a796adeb2762d1161
+  Type: BaseDataVariableType
+  DataType: Int32
+  Value: 1
+- Name: OneDayTime
+  Type: BaseDataVariableType
+  DataType: Duration
+  Value: "0:23:59:59.0000000"
+- Name: DailyReportDateTO
+  Id: g=7a2ed26555d9e70c19f61d58a92c8993
+  Type: BaseDataVariableType
+  DataType: DateTime
+- Name: AlarmReportDateTo
+  Id: g=682628e0b67f4d7a666f6cc20909d9d9
+  Type: BaseDataVariableType
+  DataType: DateTime
+- File: Harmonics/Harmonics.yaml

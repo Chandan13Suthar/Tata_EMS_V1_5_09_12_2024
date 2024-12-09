@@ -1,0 +1,210 @@
+Name: HomePage2
+Type: FolderType
+Children:
+- Name: SpinBoxValue
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: TodayConsumption
+  Type: BaseDataVariableType
+  DataType: Float
+- Name: TodayCost
+  Type: BaseDataVariableType
+  DataType: Float
+- Name: MonthConsumption
+  Type: BaseDataVariableType
+  DataType: Float
+- Name: MonthCost
+  Type: BaseDataVariableType
+  DataType: Float
+- Name: Button1
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Value: true
+- Name: Button2
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: Refresh
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: TargetSubmit
+  Id: g=962a1b91382c09366171a0d77fa35e95
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: Variable2
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: Homepagetrendquery
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "0"
+  Children:
+  - Name: KeyValueConverter1
+    Type: ValueMapConverter
+    Children:
+    - Name: Source
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/RefreshHomePage1"
+    - Name: ns=5;Pairs
+      Type: BaseObjectType
+      Children:
+      - Name: Pair
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 100
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: String
+          Children:
+          - Name: KeyValueConverter1
+            Type: ValueMapConverter
+            Children:
+            - Name: Source
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/SpinBoxValue"
+            - Name: ns=5;Pairs
+              Type: BaseObjectType
+              Children:
+              - Name: Pair
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Value: "SELECT * FROM \"DailyJaceDataLogger\"  WHERE Jace  = '33KV'"
+              - Name: Pair1
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 1
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Value: "SELECT * FROM \"DailyJaceDataLogger\"  WHERE Jace  = 'UTILITY'"
+              - Name: Pair2
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 2
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Value: "SELECT * FROM \"DailyJaceDataLogger\"  WHERE Jace  = 'ADMIN'"
+              - Name: Pair3
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 3
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Value: "SELECT * FROM \"DailyJaceDataLogger\"  WHERE Jace  = 'SPP'"
+              - Name: Pair4
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 4
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Value: "SELECT * FROM \"DailyJaceDataLogger\"  WHERE Jace  = 'BODYSHOP'"
+              - Name: Pair5
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 5
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Value: "SELECT * FROM \"DailyJaceDataLogger\"  WHERE Jace  = 'TCF'"
+              - Name: Pair6
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 6
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Value: "SELECT * FROM \"DailyJaceDataLogger\"  WHERE Jace  = 'STAMPING'"
+              - Name: Pair7
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 7
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Value: "SELECT * FROM \"DailyJaceDataLogger\"  WHERE Jace  = 'PAINTSHOP'"
+              - Name: Pair8
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 8
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Value: "SELECT * FROM \"DailyJaceDataLogger\"  WHERE Jace  = 'PUMPROOM'"
+      - Name: Pair1
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 1
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "SELECT * FROM \"DailyJaceDataLogger\"  WHERE Jace  = '33KV'"
+      - Name: Pair2
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: String
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../.."
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+- File: PRoduction_And_Target/PRoduction_And_Target.yaml

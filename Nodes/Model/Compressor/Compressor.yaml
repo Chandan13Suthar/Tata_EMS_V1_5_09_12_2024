@@ -1,0 +1,894 @@
+Name: Compressor
+Type: FolderType
+Children:
+- Class: DataType
+  Name: Selection
+  Id: g=a36264b5012026e93d014bdc12567dc4
+  Supertype: Enumeration
+  EnumDefinition: 
+   {
+    "Name": "Selection",
+    "DataType": {
+     "IdType": 2,
+     "Id": "a36264b5012026e93d014bdc12567dc4",
+     "Namespace": 36
+    },
+    "Fields": [{
+      "Name": "Value0",
+      "Value": 0,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "CHILLER -6"
+      }
+     },{
+      "Name": "Value1",
+      "Value": 1,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "MCB -MCC-04  (Secondary pumps)"
+      }
+     },{
+      "Name": "Value2",
+      "Value": 2,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "MCB -MCC-03 (Primary pumps)"
+      }
+     },{
+      "Name": "Value3",
+      "Value": 3,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "MCB-MCC-05 (Chiller Condenser Pump)"
+      }
+     },{
+      "Name": "Value4",
+      "Value": 4,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "MVS- 02 ( CHILLER ) INCOMER"
+      }
+     },{
+      "Name": "Value5",
+      "Value": 5,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Chiller Cooling tower"
+      }
+     }]
+   }
+  Children:
+  - Name: ns=0;EnumValues
+    Type: BaseDataVariableType
+    DataType: EnumValueType
+    ModellingRule: None
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+    Value: [{"TypeId":{"Id":7594},"Body":{"Value":0,"DisplayName":{"LocaleId":"en-US","Text":"CHILLER -6"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":1,"DisplayName":{"LocaleId":"en-US","Text":"MCB -MCC-04  (Secondary pumps)"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":2,"DisplayName":{"LocaleId":"en-US","Text":"MCB -MCC-03 (Primary pumps)"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":3,"DisplayName":{"LocaleId":"en-US","Text":"MCB-MCC-05 (Chiller Condenser Pump)"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":4,"DisplayName":{"LocaleId":"en-US","Text":"MVS- 02 ( CHILLER ) INCOMER"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":5,"DisplayName":{"LocaleId":"en-US","Text":"Chiller Cooling tower"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+- Name: Compressor
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: Compressor_Name
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "0"
+  Children:
+  - Name: KeyValueConverter1
+    Type: ValueMapConverter
+    Children:
+    - Name: Source
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../Compressor"
+    - Name: ns=5;Pairs
+      Type: BaseObjectType
+      Children:
+      - Name: Pair
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "J2_MCB_MVS_03_O/G_F3"
+      - Name: Pair1
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 1
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "J2_MCB_MCC_04_IN1F1"
+      - Name: Pair2
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 2
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "J2_MCB_MCC_03_IN1F1"
+      - Name: Pair3
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 3
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "J2_MCB_MCC_05_IN1F1"
+      - Name: Pair4
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 4
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "J2_MCB_MVS_02_IN1F1"
+      - Name: Pair5
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 5
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "J2_MCB_MCC_01_IN1F1"
+- Name: Date
+  Type: BaseDataVariableType
+  DataType: DateTime
+  Value: "2024-01-01T00:00:00.0000000"
+- Class: DataType
+  Name: Shiftselection
+  Id: g=68619f0052eac0d1aafd605bd57bb41d
+  Supertype: Enumeration
+  EnumDefinition: 
+   {
+    "Name": "Shiftselection",
+    "DataType": {
+     "IdType": 2,
+     "Id": "68619f0052eac0d1aafd605bd57bb41d",
+     "Namespace": 36
+    },
+    "Fields": [{
+      "Name": "Value0",
+      "Value": 0,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Start UP"
+      }
+     },{
+      "Name": "Value1",
+      "Value": 1,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Shift A"
+      }
+     },{
+      "Name": "Value2",
+      "Value": 2,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Shift B"
+      }
+     },{
+      "Name": "Value3",
+      "Value": 3,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Shift C"
+      }
+     }]
+   }
+  Children:
+  - Name: ns=0;EnumValues
+    Type: BaseDataVariableType
+    DataType: EnumValueType
+    ModellingRule: None
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+    Value: [{"TypeId":{"Id":7594},"Body":{"Value":0,"DisplayName":{"LocaleId":"en-US","Text":"Start UP"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":1,"DisplayName":{"LocaleId":"en-US","Text":"Shift A"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":2,"DisplayName":{"LocaleId":"en-US","Text":"Shift B"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":3,"DisplayName":{"LocaleId":"en-US","Text":"Shift C"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+- Name: Shift
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: StartupMultiplier
+  Type: BaseDataVariableType
+  DataType: Float
+  Value: 0.6700000166893005
+- Name: ShiftA_Multiplier
+  Type: BaseDataVariableType
+  DataType: Float
+  Value: 0.6700000166893005
+- Name: ShiftB_Multiplier
+  Type: BaseDataVariableType
+  DataType: Float
+  Value: 0.5
+- Name: ShiftC_Multiplier
+  Type: BaseDataVariableType
+  DataType: Float
+  Value: 0.3499999940395355
+- Name: Chiller6_Max
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: Chiller6_Min
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: Chiller6_Total
+  Type: BaseDataVariableType
+  DataType: Float
+  Children:
+  - Name: ExpressionEvaluator1
+    Type: ExpressionEvaluator
+    Children:
+    - Name: Expression
+      Type: BaseDataVariableType
+      DataType: String
+      ReferenceType: HasParameter
+      Value: "{0} - {1}"
+    - Name: ns=5;Source0
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Compressor/Chiller6_Max"
+    - Name: ns=5;Source1
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Compressor/Chiller6_Min"
+- Name: J2_MCB_MCC_04_MAX
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: J2_MCB_MCC_04_MIN
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: J2_MCB_MCC_04_Total
+  Type: BaseDataVariableType
+  DataType: Float
+  Children:
+  - Name: ExpressionEvaluator1
+    Type: ExpressionEvaluator
+    Children:
+    - Name: Expression
+      Type: BaseDataVariableType
+      DataType: String
+      ReferenceType: HasParameter
+      Value: "{0} - {1}"
+    - Name: ns=5;Source0
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Compressor/J2_MCB_MCC_04_MAX"
+    - Name: ns=5;Source1
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Compressor/J2_MCB_MCC_04_MIN"
+- Name: J2_MCB_MCC_03_MAX
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: J2_MCB_MCC_03_MIN
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: J2_MCB_MCC_03_Total
+  Type: BaseDataVariableType
+  DataType: Float
+  Children:
+  - Name: ExpressionEvaluator1
+    Type: ExpressionEvaluator
+    Children:
+    - Name: Expression
+      Type: BaseDataVariableType
+      DataType: String
+      ReferenceType: HasParameter
+      Value: "{0} - {1}"
+    - Name: ns=5;Source0
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Compressor/J2_MCB_MCC_03_MAX"
+    - Name: ns=5;Source1
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Compressor/J2_MCB_MCC_03_MIN"
+- Name: J2_MCB_MCC_05_IN1F1_MAX
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: J2_MCB_MCC_05_IN1F1_MIN
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: J2_MCB_MCC_05_IN1F1_Total
+  Type: BaseDataVariableType
+  DataType: Float
+  Children:
+  - Name: ExpressionEvaluator1
+    Type: ExpressionEvaluator
+    Children:
+    - Name: Expression
+      Type: BaseDataVariableType
+      DataType: String
+      ReferenceType: HasParameter
+      Value: "{0} - {1}"
+    - Name: ns=5;Source0
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Compressor/J2_MCB_MCC_05_IN1F1_MAX"
+    - Name: ns=5;Source1
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Compressor/J2_MCB_MCC_05_IN1F1_MIN"
+- Name: J2_MCB_MVS_02_IN1F1_MAX
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: J2_MCB_MVS_02_IN1F1_MIN
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: J2_MCB_MVS_02_IN1F1_Total
+  Type: BaseDataVariableType
+  DataType: Float
+  Children:
+  - Name: ExpressionEvaluator1
+    Type: ExpressionEvaluator
+    Children:
+    - Name: Expression
+      Type: BaseDataVariableType
+      DataType: String
+      ReferenceType: HasParameter
+      Value: "{0} - {1}"
+    - Name: ns=5;Source0
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Compressor/J2_MCB_MVS_02_IN1F1_MAX"
+    - Name: ns=5;Source1
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Compressor/J2_MCB_MVS_02_IN1F1_MIN"
+- Name: J2_MCB_MCC_01_IN1F1_MAX
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: J2_MCB_MCC_01_IN1F1_MIN
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: J2_MCB_MCC_01_IN1F1_Total
+  Type: BaseDataVariableType
+  DataType: Float
+  Children:
+  - Name: ExpressionEvaluator1
+    Type: ExpressionEvaluator
+    Children:
+    - Name: Expression
+      Type: BaseDataVariableType
+      DataType: String
+      ReferenceType: HasParameter
+      Value: "{0} - {1}"
+    - Name: ns=5;Source0
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Compressor/J2_MCB_MCC_01_IN1F1_MAX"
+    - Name: ns=5;Source1
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Compressor/J2_MCB_MCC_01_IN1F1_MIN"
+- Name: Shiftstart
+  Type: BaseDataVariableType
+  DataType: DateTime
+  Children:
+  - Name: KeyValueConverter1
+    Type: ValueMapConverter
+    Children:
+    - Name: Source
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../Shift"
+    - Name: ns=5;Pairs
+      Type: BaseObjectType
+      Children:
+      - Name: Pair
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: DateTime
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../Startupstart"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+      - Name: Pair1
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 1
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: DateTime
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../ShiftAstart"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+      - Name: Pair2
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 2
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: DateTime
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../ShiftBstart"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+      - Name: Pair3
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 3
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: DateTime
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../ShiftCstart"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+- Name: Shiftend
+  Type: BaseDataVariableType
+  DataType: DateTime
+  Children:
+  - Name: KeyValueConverter1
+    Type: ValueMapConverter
+    Children:
+    - Name: Source
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../Shift"
+    - Name: ns=5;Pairs
+      Type: BaseObjectType
+      Children:
+      - Name: Pair
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: DateTime
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../Startupend"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+      - Name: Pair1
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 1
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: DateTime
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../ShiftAend"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+      - Name: Pair2
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 2
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: DateTime
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../ShiftBend"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+      - Name: Pair3
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 3
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: DateTime
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../ShiftCend"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+- Name: ShiftAstart
+  Type: BaseDataVariableType
+  DataType: DateTime
+  Value: "2024-01-01T06:45:00.0000000"
+- Name: ShiftAend
+  Type: BaseDataVariableType
+  DataType: DateTime
+  Value: "2024-01-01T15:30:00.0000000"
+- Name: ShiftBstart
+  Type: BaseDataVariableType
+  DataType: DateTime
+  Value: "2024-01-01T15:30:00.0000000"
+- Name: ShiftBend
+  Type: BaseDataVariableType
+  DataType: DateTime
+  Value: "2024-01-01T00:15:00.0000000"
+- Name: ShiftCstart
+  Type: BaseDataVariableType
+  DataType: DateTime
+  Value: "2024-01-01T00:15:00.0000000"
+- Name: ShiftCend
+  Type: BaseDataVariableType
+  DataType: DateTime
+  Value: "2024-01-01T04:45:00.0000000"
+- Name: Startupstart
+  Type: BaseDataVariableType
+  DataType: DateTime
+  Value: "2024-01-01T04:45:00.0000000"
+- Name: Startupend
+  Type: BaseDataVariableType
+  DataType: DateTime
+  Value: "2024-01-01T06:45:00.0000000"
+- Name: Comp_1_Max
+  Type: BaseDataVariableType
+  DataType: Float
+- Name: Comp_1_MIn
+  Type: BaseDataVariableType
+  DataType: Float
+- Name: Comp_2_Max
+  Type: BaseDataVariableType
+  DataType: Float
+- Name: Comp_2_MIn
+  Type: BaseDataVariableType
+  DataType: Float
+- Name: Comp_3_Max
+  Type: BaseDataVariableType
+  DataType: Float
+- Name: Comp_3_MIn
+  Type: BaseDataVariableType
+  DataType: Float
+- Name: Comp_4_Max
+  Type: BaseDataVariableType
+  DataType: Float
+- Name: Comp_4_MIn
+  Type: BaseDataVariableType
+  DataType: Float
+- Name: Comp_5_Max
+  Type: BaseDataVariableType
+  DataType: Float
+- Name: Comp_5_Min
+  Type: BaseDataVariableType
+  DataType: Float
+- Name: Comp_6_Max
+  Type: BaseDataVariableType
+  DataType: Float
+- Name: Comp_6_Min
+  Type: BaseDataVariableType
+  DataType: Float
+- Name: MCC_02_Incomer_Max
+  Type: BaseDataVariableType
+  DataType: Float
+- Name: MCC_02_Incomer_Min
+  Type: BaseDataVariableType
+  DataType: Float
+- Name: Comp_1_Total
+  Type: BaseDataVariableType
+  DataType: Float
+  Children:
+  - Name: ExpressionEvaluator1
+    Type: ExpressionEvaluator
+    Children:
+    - Name: Expression
+      Type: BaseDataVariableType
+      DataType: String
+      ReferenceType: HasParameter
+      Value: "{0} - {1}"
+    - Name: ns=5;Source0
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../Comp_1_Max"
+    - Name: ns=5;Source1
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../Comp_1_MIn"
+- Name: Comp_2_Total
+  Type: BaseDataVariableType
+  DataType: Float
+  Children:
+  - Name: ExpressionEvaluator1
+    Type: ExpressionEvaluator
+    Children:
+    - Name: Expression
+      Type: BaseDataVariableType
+      DataType: String
+      ReferenceType: HasParameter
+      Value: "{0} - {1}"
+    - Name: ns=5;Source0
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../Comp_2_Max"
+    - Name: ns=5;Source1
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../Comp_2_MIn"
+- Name: Comp_3_Total
+  Type: BaseDataVariableType
+  DataType: Float
+  Children:
+  - Name: ExpressionEvaluator1
+    Type: ExpressionEvaluator
+    Children:
+    - Name: Expression
+      Type: BaseDataVariableType
+      DataType: String
+      ReferenceType: HasParameter
+      Value: "{0} - {1}"
+    - Name: ns=5;Source0
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../Comp_3_Max"
+    - Name: ns=5;Source1
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../Comp_3_MIn"
+- Name: Comp_4_Total
+  Type: BaseDataVariableType
+  DataType: Float
+  Children:
+  - Name: ExpressionEvaluator1
+    Type: ExpressionEvaluator
+    Children:
+    - Name: Expression
+      Type: BaseDataVariableType
+      DataType: String
+      ReferenceType: HasParameter
+      Value: "{0} - {1}"
+    - Name: ns=5;Source0
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../Comp_4_Max"
+    - Name: ns=5;Source1
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../Comp_4_MIn"
+- Name: Comp_5_Total
+  Type: BaseDataVariableType
+  DataType: Float
+  Children:
+  - Name: ExpressionEvaluator1
+    Type: ExpressionEvaluator
+    Children:
+    - Name: Expression
+      Type: BaseDataVariableType
+      DataType: String
+      ReferenceType: HasParameter
+      Value: "{0} - {1}"
+    - Name: ns=5;Source0
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../Comp_5_Max"
+    - Name: ns=5;Source1
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../Comp_5_Min"
+- Name: Comp_6_Total
+  Type: BaseDataVariableType
+  DataType: Float
+  Children:
+  - Name: ExpressionEvaluator1
+    Type: ExpressionEvaluator
+    Children:
+    - Name: Expression
+      Type: BaseDataVariableType
+      DataType: String
+      ReferenceType: HasParameter
+      Value: "{0} - {1}"
+    - Name: ns=5;Source0
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../Comp_6_Max"
+    - Name: ns=5;Source1
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../Comp_6_Min"

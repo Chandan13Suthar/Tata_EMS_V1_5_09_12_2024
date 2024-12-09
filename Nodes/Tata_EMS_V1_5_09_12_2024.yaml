@@ -1,0 +1,80 @@
+Name: Tata_EMS_V1_5_09_12_2024
+Type: ProjectFolder
+Children:
+- Name: Localization
+  Type: PropertyGroup
+  Children:
+  - Name: Locales
+    Type: BaseDataVariableType
+    DataType: LocaleId
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+    Value: ["en-US"]
+  - Name: LocaleFallbackList
+    Type: BaseDataVariableType
+    DataType: LocaleId
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+    Value: ["en-US"]
+- Name: Authentication
+  Type: PropertyGroup
+  Children:
+  - Name: AuthenticationMode
+    Type: BaseDataVariableType
+    DataType: AuthenticationMode
+  - Name: DefaultUserFolder
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Security/Users"
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/FolderType"
+  - Name: DefaultDomainName
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "PIMA"
+  - Name: DomainServerAddress
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+- Name: PasswordPolicy
+  Type: PasswordPolicy
+  Children:
+  - Name: MaximumPasswordAge
+    Type: BaseDataVariableType
+    DataType: UInt16
+  - Name: EnforcePasswordHistory
+    Type: BaseDataVariableType
+    DataType: Byte
+    Value: 1
+  - Name: MinimumPasswordAge
+    Type: BaseDataVariableType
+    DataType: UInt16
+  - Name: MinimumPasswordLength
+    Type: BaseDataVariableType
+    DataType: Byte
+    Value: 8
+- Name: AlarmConfiguration
+  Type: PropertyGroup
+  Children:
+  - Name: DynamicVariablesPollingTime
+    Type: BaseDataVariableType
+    DataType: Duration
+    Value: "0:00:00:00.1000000"
+  - Name: AlarmsCollectionEnabled
+    Type: BaseDataVariableType
+    DataType: Boolean
+- File: Model/Model.yaml
+- File: UI/UI.yaml
+- File: Alarms/Alarms.yaml
+- File: Converters/Converters.yaml
+- File: Loggers/Loggers.yaml
+- File: DataStores/DataStores.yaml
+- File: Reports/Reports.yaml
+- File: CommDrivers/CommDrivers.yaml
+- File: NetLogic/NetLogic.yaml
+- File: Security/Security.yaml
+- File: Translations/Translations.yaml
+- File: Retentivity/Retentivity.yaml
+- File: AlarmTypes/AlarmTypes.yaml

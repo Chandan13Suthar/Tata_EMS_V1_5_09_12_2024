@@ -1,0 +1,17 @@
+Name: Spare_2
+Type: FolderType
+Children:
+- Name: Consumption
+  Type: BaseDataVariableType
+  DataType: Float
+  Value: 160.0
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../../../../CommDrivers/33KVmeters/MicroControllerStation1/Tags/OG14_IN2_SPARE[3]@Value"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2

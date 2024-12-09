@@ -1,0 +1,54 @@
+Name: HomePageJaceWisePanel
+Type: FolderType
+Children:
+- Name: Active Power
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "Active Power"
+- Name: Apparent Power
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "Apparent Power"
+- Name: Reactive Power
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "Reactive Power"
+- Name: 'R-Phase'
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "R-Phase"
+- Name: 'Y-Phase'
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "Y-Phase"
+- Name: 'B-Phase'
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "B-Phase"
+- Name: HomePageAlarmQuery
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "0"
+  Children:
+  - Name: StringFormatter1
+    Type: StringFormatter
+    Children:
+    - Name: Format
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ReferenceType: HasParameter
+      Value: {"LocaleId":"en-US","Text":"SELECT * FROM Model WHERE Jace  LIKE '{0}'"}
+    - Name: ns=5;Source0
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/JaceName"
+- Name: DateForProductionCount
+  Type: BaseDataVariableType
+  DataType: DateTime
+  Description: {"LocaleId":"en-US","Text":"Date Selection for previous date production count addition"}
+  Value: "2024-01-01T00:00:00.0000000"

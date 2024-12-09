@@ -1,0 +1,290 @@
+Name: NetLogic
+Type: NetLogicCategoryFolder
+Children:
+- Name: ClockLogic
+  Type: NetLogic
+  WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
+  Children:
+  - Name: Time
+    Type: BaseDataVariableType
+    DataType: DateTime
+  - Name: UTCTime
+    Type: BaseDataVariableType
+    DataType: DateTime
+  - Name: TodayStartTime
+    Type: BaseDataVariableType
+    DataType: DateTime
+  - Name: TodayEndTime
+    Type: BaseDataVariableType
+    DataType: DateTime
+  - Name: TodayDate
+    Type: BaseDataVariableType
+    DataType: DateTime
+  - Name: Day
+    Type: BaseDataVariableType
+    DataType: DateString
+    Value: "0"
+  - Name: MonthYear
+    Type: BaseDataVariableType
+    DataType: DateString
+    Value: "0"
+  - Name: CurrentMonthFirstdate
+    Type: BaseDataVariableType
+    DataType: DateTime
+  - Name: CurrentFirstBack
+    Type: BaseDataVariableType
+    DataType: DateTime
+  - Name: Month
+    Type: BaseDataVariableType
+    DataType: DateString
+    Value: "0"
+- Name: MonthGenericTableExporter
+  Id: g=e6cf496a0ffc3c7297af6c1a748ed591
+  Type: NetLogic
+  WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
+  Children:
+  - Name: CSVPath
+    Type: BaseDataVariableType
+    DataType: AbsoluteResourceUri
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../Model/Reports/Monthlyconsumptionreportpath_As_Excel"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: FieldDelimiter
+    Type: BaseDataVariableType
+    DataType: String
+    Value: ","
+  - Name: Table
+    Type: NodePointer
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/Table"
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../DataStores/ODBCDatabase/Tables/DailyConsumptionAgg@NodeId"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: Query
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../Model/Reports/Second_Report_Links/JaceExcelExportQuery"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: WrapFields
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: ns=21;LibraryReference
+    Type: ObjectLibraryReference
+    DataType: ObjectLibraryReferenceDataType
+    Value: 
+     {
+      "TypeId": {
+       "Id": 72,
+       "Namespace": 21
+      },
+      "Body": {
+       "libraryGuid": "f0701375ee41467993d632db6a8fdaa5",
+       "objectGuid": "c23f147ab2c551bda6501c8bad3f1ec9",
+       "objectVersion": 1,
+       "highestIgnoredVersion": 0
+      }
+     }
+  - Class: Method
+    Name: Export
+- Name: GenericTableExporter
+  Id: g=7214f90f34ac7e34bd79f054605f925d
+  Type: NetLogic
+  WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
+  Children:
+  - Name: CSVPath
+    Id: g=a26fcb10b68677cc54539afe35628ab6
+    Type: BaseDataVariableType
+    DataType: AbsoluteResourceUri
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../Model/Reports/Dailyconsumptionreportpath_As_Excel"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: FieldDelimiter
+    Type: BaseDataVariableType
+    DataType: String
+    Value: ","
+  - Class: Method
+    Name: Export
+  - Name: Table
+    Type: NodePointer
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/Table"
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../DataStores/ODBCDatabase/Tables/HomePage@NodeId"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: Query
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../Model/Reports/First_Report_Links/ExcelExportQuery"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: WrapFields
+    Type: BaseDataVariableType
+    DataType: Boolean
+- Name: CurrentDateTimeFormatted
+  Type: NetLogic
+  WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
+  Children:
+  - Name: Time
+    Type: BaseDataVariableType
+    DataType: DateTime
+  - Name: UTCTime
+    Type: BaseDataVariableType
+    DataType: DateTime
+- Name: ReportGenerationDialogLogic
+  Id: g=e11ba6dff61f4ad360b485744110b662
+  Type: NetLogic
+  Children:
+  - Class: Method
+    Name: Dialog
+- Name: DateAddUpdateLogic
+  Id: g=1f06399e0fd0e2b74ddc2753ff1e59db
+  Type: NetLogic
+  Children:
+  - Class: Method
+    Name: DateUpdateTask
+- Name: RESTApiClient
+  Type: NetLogic
+  WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
+  Children:
+  - Class: Method
+    Name: Post
+    Children:
+    - Name: ns=0;InputArguments
+      Type: BaseVariableType
+      DataType: Argument
+      ReferenceType: HasProperty
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+      Value: [{"TypeId":{"Id":296},"Body":{"Name":"apiUrl","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"requestBody","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"bearerToken","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"contentType","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+    - Name: ns=0;OutputArguments
+      Type: BaseVariableType
+      DataType: Argument
+      ReferenceType: HasProperty
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+      Value: [{"TypeId":{"Id":296},"Body":{"Name":"response","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"code","DataType":{"Id":6},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+  - Name: Timeout
+    Type: BaseDataVariableType
+    DataType: Duration
+    Value: "0:00:01:10.0000000"
+  - Name: UserAgent
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "FTOptix"
+  - Class: Method
+    Name: Put
+    Children:
+    - Name: ns=0;InputArguments
+      Type: BaseVariableType
+      DataType: Argument
+      ReferenceType: HasProperty
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+      Value: [{"TypeId":{"Id":296},"Body":{"Name":"apiUrl","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"requestBody","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"bearerToken","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"contentType","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+    - Name: ns=0;OutputArguments
+      Type: BaseVariableType
+      DataType: Argument
+      ReferenceType: HasProperty
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+      Value: [{"TypeId":{"Id":296},"Body":{"Name":"response","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"code","DataType":{"Id":6},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+  - Class: Method
+    Name: Get
+    Children:
+    - Name: ns=0;InputArguments
+      Type: BaseVariableType
+      DataType: Argument
+      ReferenceType: HasProperty
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+      Value: [{"TypeId":{"Id":296},"Body":{"Name":"apiUrl","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"queryString","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"bearerToken","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+    - Name: ns=0;OutputArguments
+      Type: BaseVariableType
+      DataType: Argument
+      ReferenceType: HasProperty
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+      Value: [{"TypeId":{"Id":296},"Body":{"Name":"response","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"code","DataType":{"Id":6},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+  - Name: ns=21;LibraryReference
+    Type: ObjectLibraryReference
+    DataType: ObjectLibraryReferenceDataType
+    Value: 
+     {
+      "TypeId": {
+       "Id": 72,
+       "Namespace": 21
+      },
+      "Body": {
+       "libraryGuid": "f0701375ee41467993d632db6a8fdaa5",
+       "objectGuid": "6dffd8c85dd908ae3157cc77d4387dcc",
+       "objectVersion": 1,
+       "highestIgnoredVersion": 0
+      }
+     }
+- Name: Chiller
+  Id: g=2badef56908218d1a37d8c5d0c0a5e8e
+  Type: NetLogic
+  Children:
+  - Class: Method
+    Name: chillercalculation
+- Name: compressor
+  Id: g=df2c92d9f3f6e4af7231efd35cb9871a
+  Type: NetLogic
+  Children:
+  - Class: Method
+    Name: compressorcalculation
+- Name: Shiftwisedateselection
+  Id: g=c1abe3423bb0ced78a043280f409609b
+  Type: NetLogic
+  Children:
+  - Class: Method
+    Name: DateUpdateTask

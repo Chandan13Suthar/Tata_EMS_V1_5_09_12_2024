@@ -1,0 +1,16 @@
+Name: SPP_1
+Type: FolderType
+Children:
+- Name: Consumption
+  Type: BaseDataVariableType
+  DataType: Float
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../../../../CommDrivers/33KVmeters/MicroControllerStation1/Tags/OG16_IN1_SPP_SHOP[3]@Value"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2

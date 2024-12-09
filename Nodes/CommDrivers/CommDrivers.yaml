@@ -1,0 +1,6 @@
+Name: CommDrivers
+Type: CommDriversCategoryFolder
+Children:
+- File: 33KVmeters/33KVmeters.yaml
+- File: PumpRoomMeters/PumpRoomMeters.yaml
+- File: Bodyshopsubstation1/Bodyshopsubstation1.yaml

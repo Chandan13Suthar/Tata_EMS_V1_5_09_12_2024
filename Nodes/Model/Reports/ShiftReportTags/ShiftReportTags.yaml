@@ -1,0 +1,3824 @@
+Name: ShiftReportTags
+Type: FolderType
+Children:
+- Class: DataType
+  Name: Shift
+  Id: g=d8b2b53854776290737569ffd4964dab
+  Supertype: Enumeration
+  EnumDefinition: 
+   {
+    "Name": "Shift",
+    "DataType": {
+     "IdType": 2,
+     "Id": "d8b2b53854776290737569ffd4964dab",
+     "Namespace": 36
+    },
+    "Fields": [{
+      "Name": "Value0",
+      "Value": 0,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Select Shift"
+      }
+     },{
+      "Name": "Value1",
+      "Value": 1,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Start Up"
+      }
+     },{
+      "Name": "Value2",
+      "Value": 2,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Shift A"
+      }
+     },{
+      "Name": "Value3",
+      "Value": 3,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Shift B"
+      }
+     },{
+      "Name": "Value4",
+      "Value": 4,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Shift C"
+      }
+     }]
+   }
+  Children:
+  - Name: ns=0;EnumValues
+    Type: BaseDataVariableType
+    DataType: EnumValueType
+    ModellingRule: None
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+    Value: [{"TypeId":{"Id":7594},"Body":{"Value":0,"DisplayName":{"LocaleId":"en-US","Text":"Select Shift"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":1,"DisplayName":{"LocaleId":"en-US","Text":"Start Up"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":2,"DisplayName":{"LocaleId":"en-US","Text":"Shift A"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":3,"DisplayName":{"LocaleId":"en-US","Text":"Shift B"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":4,"DisplayName":{"LocaleId":"en-US","Text":"Shift C"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+- Name: ShiftNumber
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: ShiftName
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "0"
+  Children:
+  - Name: KeyValueConverter1
+    Type: ValueMapConverter
+    Children:
+    - Name: Source
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../ShiftNumber"
+    - Name: ns=5;Pairs
+      Type: BaseObjectType
+      Children:
+      - Name: Pair
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Select Shift"
+      - Name: Pair1
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 1
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Start Up"
+      - Name: Pair2
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 2
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Shift A"
+      - Name: Pair3
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 3
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Shift B"
+      - Name: Pair4
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 4
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Shift C"
+- Name: Meter_Wise_query
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "0"
+  Children:
+  - Name: KeyValueConverter1
+    Type: ValueMapConverter
+    Children:
+    - Name: Source
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../ShiftNumber"
+    - Name: ns=5;Pairs
+      Type: BaseObjectType
+      Children:
+      - Name: Pair
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 1
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: String
+          Children:
+          - Name: KeyValueConverter1
+            Type: ValueMapConverter
+            Children:
+            - Name: Source
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../../../First_Report_Links/Selection1"
+            - Name: ns=5;Pairs
+              Type: BaseObjectType
+              Children:
+              - Name: Pair
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 1
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: StringFormatter1
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  '33KV' AND  Meter = {3:sql_literal}"}
+                    - Name: ns=5;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../Startupfrom"
+                    - Name: ns=5;Source1
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../StartupTo"
+                    - Name: ns=5;Source3
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/First_Report_Links/Jace03selection"
+              - Name: Pair1
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 2
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: StringFormatter1
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'UTILITY' AND  Meter = {3:sql_literal}"}
+                    - Name: ns=5;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../Startupfrom"
+                    - Name: ns=5;Source1
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../StartupTo"
+                    - Name: ns=5;Source3
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../../First_Report_Links/Jace05selection"
+              - Name: Pair2
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 3
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: StringFormatter1
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'PUMPROOM' AND  Meter = {3:sql_literal}"}
+                    - Name: ns=5;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../Startupfrom"
+                    - Name: ns=5;Source1
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../StartupTo"
+                    - Name: ns=5;Source3
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../../First_Report_Links/Jace06selection"
+              - Name: Pair3
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 4
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: StringFormatter1
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'PAINTSHOP' AND  Meter = {3:sql_literal}"}
+                    - Name: ns=5;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../Startupfrom"
+                    - Name: ns=5;Source1
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../StartupTo"
+                    - Name: ns=5;Source3
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../../First_Report_Links/Jace08selection"
+              - Name: Pair4
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 5
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: StringFormatter1
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'BODYSHOP' AND  Meter = {3:sql_literal}"}
+                    - Name: ns=5;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../Startupfrom"
+                    - Name: ns=5;Source1
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../StartupTo"
+                    - Name: ns=5;Source3
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../../First_Report_Links/Jace10selection"
+              - Name: Pair5
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 6
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: StringFormatter1
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'TCF' AND  Meter = {3:sql_literal}"}
+                    - Name: ns=5;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../Startupfrom"
+                    - Name: ns=5;Source1
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../StartupTo"
+                    - Name: ns=5;Source3
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../../First_Report_Links/Jace11selection"
+              - Name: Pair6
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 7
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: StringFormatter1
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'STAMPING' AND  Meter = {3:sql_literal}"}
+                    - Name: ns=5;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../Startupfrom"
+                    - Name: ns=5;Source1
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../StartupTo"
+                    - Name: ns=5;Source3
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../../First_Report_Links/Jace13selection"
+              - Name: Pair7
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 8
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: StringFormatter1
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'ADMIN' AND  Meter = {3:sql_literal}"}
+                    - Name: ns=5;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../Startupfrom"
+                    - Name: ns=5;Source1
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../StartupTo"
+                    - Name: ns=5;Source3
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../../First_Report_Links/Jace16selection"
+              - Name: Pair8
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 9
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: StringFormatter1
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'SPP' AND  Meter = {3:sql_literal}"}
+                    - Name: ns=5;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../Startupfrom"
+                    - Name: ns=5;Source1
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../StartupTo"
+                    - Name: ns=5;Source3
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../../First_Report_Links/Jace09selection"
+      - Name: Pair1
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 2
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: String
+          Children:
+          - Name: KeyValueConverter1
+            Type: ValueMapConverter
+            Children:
+            - Name: Source
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../../../First_Report_Links/Selection1"
+            - Name: ns=5;Pairs
+              Type: BaseObjectType
+              Children:
+              - Name: Pair
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 1
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: StringFormatter1
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  '33KV' AND  Meter = {3:sql_literal}"}
+                    - Name: ns=5;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftAFrom"
+                    - Name: ns=5;Source1
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftATo"
+                    - Name: ns=5;Source3
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/First_Report_Links/Jace03selection"
+              - Name: Pair1
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 2
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: StringFormatter1
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'UTILITY' AND  Meter = {3:sql_literal}"}
+                    - Name: ns=5;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftAFrom"
+                    - Name: ns=5;Source1
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftATo"
+                    - Name: ns=5;Source3
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../../First_Report_Links/Jace05selection"
+              - Name: Pair2
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 3
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: StringFormatter1
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'PUMPROOM' AND  Meter = {3:sql_literal}"}
+                    - Name: ns=5;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftAFrom"
+                    - Name: ns=5;Source1
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftATo"
+                    - Name: ns=5;Source3
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../../First_Report_Links/Jace06selection"
+              - Name: Pair3
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 4
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: StringFormatter1
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'PAINTSHOP' AND  Meter = {3:sql_literal}"}
+                    - Name: ns=5;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftAFrom"
+                    - Name: ns=5;Source1
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftATo"
+                    - Name: ns=5;Source3
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../../First_Report_Links/Jace08selection"
+              - Name: Pair4
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 5
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: StringFormatter1
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'BODYSHOP' AND  Meter = {3:sql_literal}"}
+                    - Name: ns=5;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftAFrom"
+                    - Name: ns=5;Source1
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftATo"
+                    - Name: ns=5;Source3
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../../First_Report_Links/Jace10selection"
+              - Name: Pair5
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 6
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: StringFormatter1
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'TCF' AND  Meter = {3:sql_literal}"}
+                    - Name: ns=5;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftAFrom"
+                    - Name: ns=5;Source1
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftATo"
+                    - Name: ns=5;Source3
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../../First_Report_Links/Jace11selection"
+              - Name: Pair6
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 7
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: StringFormatter1
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'STAMPING' AND  Meter = {3:sql_literal}"}
+                    - Name: ns=5;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftAFrom"
+                    - Name: ns=5;Source1
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftATo"
+                    - Name: ns=5;Source3
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../../First_Report_Links/Jace13selection"
+              - Name: Pair7
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 8
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: StringFormatter1
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'ADMIN' AND  Meter = {3:sql_literal}"}
+                    - Name: ns=5;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftAFrom"
+                    - Name: ns=5;Source1
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftATo"
+                    - Name: ns=5;Source3
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../../First_Report_Links/Jace16selection"
+              - Name: Pair8
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 9
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: StringFormatter1
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'SPP' AND  Meter = {3:sql_literal}"}
+                    - Name: ns=5;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftAFrom"
+                    - Name: ns=5;Source1
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftATo"
+                    - Name: ns=5;Source3
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../../First_Report_Links/Jace09selection"
+      - Name: Pair2
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 3
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: String
+          Children:
+          - Name: KeyValueConverter1
+            Type: ValueMapConverter
+            Children:
+            - Name: Source
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../../../First_Report_Links/Selection1"
+            - Name: ns=5;Pairs
+              Type: BaseObjectType
+              Children:
+              - Name: Pair
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 1
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: StringFormatter1
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  '33KV' AND  Meter = {3:sql_literal}"}
+                    - Name: ns=5;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftBFrom"
+                    - Name: ns=5;Source1
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftBTo"
+                    - Name: ns=5;Source3
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/First_Report_Links/Jace03selection"
+              - Name: Pair1
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 2
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: StringFormatter1
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'UTILITY' AND  Meter = {3:sql_literal}"}
+                    - Name: ns=5;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftBFrom"
+                    - Name: ns=5;Source1
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftBTo"
+                    - Name: ns=5;Source3
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../../First_Report_Links/Jace05selection"
+              - Name: Pair2
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 3
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: StringFormatter1
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'PUMPROOM' AND  Meter = {3:sql_literal}"}
+                    - Name: ns=5;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftBFrom"
+                    - Name: ns=5;Source1
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftBTo"
+                    - Name: ns=5;Source3
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../../First_Report_Links/Jace06selection"
+              - Name: Pair3
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 4
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: StringFormatter1
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'PAINTSHOP' AND  Meter = {3:sql_literal}"}
+                    - Name: ns=5;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftBFrom"
+                    - Name: ns=5;Source1
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftBTo"
+                    - Name: ns=5;Source3
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../../First_Report_Links/Jace08selection"
+              - Name: Pair4
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 5
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: StringFormatter1
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'BODYSHOP' AND  Meter = {3:sql_literal}"}
+                    - Name: ns=5;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftBFrom"
+                    - Name: ns=5;Source1
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftBTo"
+                    - Name: ns=5;Source3
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../../First_Report_Links/Jace10selection"
+              - Name: Pair5
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 6
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: StringFormatter1
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'TCF' AND  Meter = {3:sql_literal}"}
+                    - Name: ns=5;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftBFrom"
+                    - Name: ns=5;Source1
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftBTo"
+                    - Name: ns=5;Source3
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../../First_Report_Links/Jace11selection"
+              - Name: Pair6
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 7
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: StringFormatter1
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'STAMPING' AND  Meter = {3:sql_literal}"}
+                    - Name: ns=5;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftBFrom"
+                    - Name: ns=5;Source1
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftBTo"
+                    - Name: ns=5;Source3
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../../First_Report_Links/Jace13selection"
+              - Name: Pair7
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 8
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: StringFormatter1
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'ADMIN' AND  Meter = {3:sql_literal}"}
+                    - Name: ns=5;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftBFrom"
+                    - Name: ns=5;Source1
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftBTo"
+                    - Name: ns=5;Source3
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../../First_Report_Links/Jace16selection"
+              - Name: Pair8
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 9
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: StringFormatter1
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'SPP' AND  Meter = {3:sql_literal}"}
+                    - Name: ns=5;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftBFrom"
+                    - Name: ns=5;Source1
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftBTo"
+                    - Name: ns=5;Source3
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../../First_Report_Links/Jace09selection"
+      - Name: Pair3
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 4
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: String
+          Children:
+          - Name: KeyValueConverter1
+            Type: ValueMapConverter
+            Children:
+            - Name: Source
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../../../First_Report_Links/Selection1"
+            - Name: ns=5;Pairs
+              Type: BaseObjectType
+              Children:
+              - Name: Pair
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 1
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: StringFormatter1
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  '33KV' AND  Meter = {3:sql_literal}"}
+                    - Name: ns=5;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftCFrom"
+                    - Name: ns=5;Source1
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftCTo"
+                    - Name: ns=5;Source3
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/First_Report_Links/Jace03selection"
+              - Name: Pair1
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 2
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: StringFormatter1
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'UTILITY' AND  Meter = {3:sql_literal}"}
+                    - Name: ns=5;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftCFrom"
+                    - Name: ns=5;Source1
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftCTo"
+                    - Name: ns=5;Source3
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../../First_Report_Links/Jace05selection"
+              - Name: Pair2
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 3
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: StringFormatter1
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'PUMPROOM' AND  Meter = {3:sql_literal}"}
+                    - Name: ns=5;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftCFrom"
+                    - Name: ns=5;Source1
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftCTo"
+                    - Name: ns=5;Source3
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../../First_Report_Links/Jace06selection"
+              - Name: Pair3
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 4
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: StringFormatter1
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'PAINTSHOP' AND  Meter = {3:sql_literal}"}
+                    - Name: ns=5;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftCFrom"
+                    - Name: ns=5;Source1
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftCTo"
+                    - Name: ns=5;Source3
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../../First_Report_Links/Jace08selection"
+              - Name: Pair4
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 5
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: StringFormatter1
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'BODYSHOP' AND  Meter = {3:sql_literal}"}
+                    - Name: ns=5;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftCFrom"
+                    - Name: ns=5;Source1
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftCTo"
+                    - Name: ns=5;Source3
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../../First_Report_Links/Jace10selection"
+              - Name: Pair5
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 6
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: StringFormatter1
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'TCF' AND  Meter = {3:sql_literal}"}
+                    - Name: ns=5;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftCFrom"
+                    - Name: ns=5;Source1
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftCTo"
+                    - Name: ns=5;Source3
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../../First_Report_Links/Jace11selection"
+              - Name: Pair6
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 7
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: StringFormatter1
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'STAMPING' AND  Meter = {3:sql_literal}"}
+                    - Name: ns=5;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftCFrom"
+                    - Name: ns=5;Source1
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftCTo"
+                    - Name: ns=5;Source3
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../../First_Report_Links/Jace13selection"
+              - Name: Pair7
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 8
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: StringFormatter1
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'ADMIN' AND  Meter = {3:sql_literal}"}
+                    - Name: ns=5;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftCFrom"
+                    - Name: ns=5;Source1
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftCTo"
+                    - Name: ns=5;Source3
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../../First_Report_Links/Jace16selection"
+              - Name: Pair8
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Value: 9
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: StringFormatter1
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'SPP' AND  Meter = {3:sql_literal}"}
+                    - Name: ns=5;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftCFrom"
+                    - Name: ns=5;Source1
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../ShiftCTo"
+                    - Name: ns=5;Source3
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../../../First_Report_Links/Jace09selection"
+- Name: Jace_Wise_query
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "0"
+  Children:
+  - Name: ConditionalConverter1
+    Type: ConditionalConverter
+    Children:
+    - Name: Condition
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/First_Report_Links/Gererate_J1"
+    - Name: TrueValue
+      Type: BaseDataVariableType
+      DataType: String
+      ReferenceType: HasParameter
+      Children:
+      - Name: KeyValueConverter1
+        Type: ValueMapConverter
+        Children:
+        - Name: Source
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../ShiftNumber"
+        - Name: ns=5;Pairs
+          Type: BaseObjectType
+          Children:
+          - Name: Pair
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Type: BaseDataVariableType
+              DataType: UInt32
+              Value: 1
+            - Name: Value
+              Type: BaseDataVariableType
+              DataType: String
+              Children:
+              - Name: StringFormatter1
+                Type: StringFormatter
+                Children:
+                - Name: Format
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  ReferenceType: HasParameter
+                  Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal}"}
+                - Name: ns=5;Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/Startupfrom"
+                - Name: ns=5;Source1
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/StartupTo"
+          - Name: Pair1
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Type: BaseDataVariableType
+              DataType: UInt32
+              Value: 2
+            - Name: Value
+              Type: BaseDataVariableType
+              DataType: String
+              Children:
+              - Name: StringFormatter1
+                Type: StringFormatter
+                Children:
+                - Name: Format
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  ReferenceType: HasParameter
+                  Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal}"}
+                - Name: ns=5;Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../../../../../../ShiftAFrom"
+                - Name: ns=5;Source1
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../../../../../../ShiftATo"
+          - Name: Pair2
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Type: BaseDataVariableType
+              DataType: UInt32
+              Value: 3
+            - Name: Value
+              Type: BaseDataVariableType
+              DataType: String
+              Children:
+              - Name: StringFormatter1
+                Type: StringFormatter
+                Children:
+                - Name: Format
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  ReferenceType: HasParameter
+                  Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal}"}
+                - Name: ns=5;Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../../../../../../ShiftBFrom"
+                - Name: ns=5;Source1
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../../../../../../ShiftBTo"
+          - Name: Pair3
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Type: BaseDataVariableType
+              DataType: UInt32
+              Value: 4
+            - Name: Value
+              Type: BaseDataVariableType
+              DataType: String
+              Children:
+              - Name: StringFormatter1
+                Type: StringFormatter
+                Children:
+                - Name: Format
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  ReferenceType: HasParameter
+                  Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal}"}
+                - Name: ns=5;Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../../../../../../ShiftCFrom"
+                - Name: ns=5;Source1
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../../../../../../ShiftCTo"
+    - Name: FalseValue
+      Type: BaseDataVariableType
+      DataType: String
+      ReferenceType: HasParameter
+      Children:
+      - Name: KeyValueConverter1
+        Type: ValueMapConverter
+        Children:
+        - Name: Source
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftNumber"
+        - Name: ns=5;Pairs
+          Type: BaseObjectType
+          Children:
+          - Name: Pair
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Type: BaseDataVariableType
+              DataType: UInt32
+              Value: 1
+            - Name: Value
+              Type: BaseDataVariableType
+              DataType: String
+              Children:
+              - Name: KeyValueConverter1
+                Type: ValueMapConverter
+                Children:
+                - Name: Source
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/First_Report_Links/Selection1"
+                - Name: ns=5;Pairs
+                  Type: BaseObjectType
+                  Children:
+                  - Name: Pair
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 1
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Children:
+                      - Name: StringFormatter1
+                        Type: StringFormatter
+                        Children:
+                        - Name: Format
+                          Type: BaseDataVariableType
+                          DataType: LocalizedText
+                          ReferenceType: HasParameter
+                          Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  '33KV'"}
+                        - Name: ns=5;Source0
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/Startupfrom"
+                        - Name: ns=5;Source1
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/StartupTo"
+                  - Name: Pair1
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 2
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Children:
+                      - Name: StringFormatter1
+                        Type: StringFormatter
+                        Children:
+                        - Name: Format
+                          Type: BaseDataVariableType
+                          DataType: LocalizedText
+                          ReferenceType: HasParameter
+                          Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'UTILITY'"}
+                        - Name: ns=5;Source0
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/Startupfrom"
+                        - Name: ns=5;Source1
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/StartupTo"
+                  - Name: Pair2
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 3
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Children:
+                      - Name: StringFormatter1
+                        Type: StringFormatter
+                        Children:
+                        - Name: Format
+                          Type: BaseDataVariableType
+                          DataType: LocalizedText
+                          ReferenceType: HasParameter
+                          Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'PUMPROOM'"}
+                        - Name: ns=5;Source0
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/Startupfrom"
+                        - Name: ns=5;Source1
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/StartupTo"
+                  - Name: Pair3
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 4
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Children:
+                      - Name: StringFormatter1
+                        Type: StringFormatter
+                        Children:
+                        - Name: Format
+                          Type: BaseDataVariableType
+                          DataType: LocalizedText
+                          ReferenceType: HasParameter
+                          Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'PAINTSHOP'"}
+                        - Name: ns=5;Source0
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/Startupfrom"
+                        - Name: ns=5;Source1
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/StartupTo"
+                  - Name: Pair4
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 5
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Children:
+                      - Name: StringFormatter1
+                        Type: StringFormatter
+                        Children:
+                        - Name: Format
+                          Type: BaseDataVariableType
+                          DataType: LocalizedText
+                          ReferenceType: HasParameter
+                          Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'BODYSHOP'"}
+                        - Name: ns=5;Source0
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/Startupfrom"
+                        - Name: ns=5;Source1
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/StartupTo"
+                  - Name: Pair5
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 6
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Children:
+                      - Name: StringFormatter1
+                        Type: StringFormatter
+                        Children:
+                        - Name: Format
+                          Type: BaseDataVariableType
+                          DataType: LocalizedText
+                          ReferenceType: HasParameter
+                          Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'TCF' "}
+                        - Name: ns=5;Source0
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/Startupfrom"
+                        - Name: ns=5;Source1
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/StartupTo"
+                  - Name: Pair6
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 7
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Children:
+                      - Name: StringFormatter1
+                        Type: StringFormatter
+                        Children:
+                        - Name: Format
+                          Type: BaseDataVariableType
+                          DataType: LocalizedText
+                          ReferenceType: HasParameter
+                          Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'STAMPING'"}
+                        - Name: ns=5;Source0
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/Startupfrom"
+                        - Name: ns=5;Source1
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/StartupTo"
+                  - Name: Pair7
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 8
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Children:
+                      - Name: StringFormatter1
+                        Type: StringFormatter
+                        Children:
+                        - Name: Format
+                          Type: BaseDataVariableType
+                          DataType: LocalizedText
+                          ReferenceType: HasParameter
+                          Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'ADMIN'"}
+                        - Name: ns=5;Source0
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/Startupfrom"
+                        - Name: ns=5;Source1
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/StartupTo"
+                  - Name: Pair8
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 9
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Children:
+                      - Name: StringFormatter1
+                        Type: StringFormatter
+                        Children:
+                        - Name: Format
+                          Type: BaseDataVariableType
+                          DataType: LocalizedText
+                          ReferenceType: HasParameter
+                          Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'SPP'"}
+                        - Name: ns=5;Source0
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/Startupfrom"
+                        - Name: ns=5;Source1
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/StartupTo"
+          - Name: Pair1
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Type: BaseDataVariableType
+              DataType: UInt32
+              Value: 2
+            - Name: Value
+              Type: BaseDataVariableType
+              DataType: String
+              Children:
+              - Name: KeyValueConverter1
+                Type: ValueMapConverter
+                Children:
+                - Name: Source
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/First_Report_Links/Selection1"
+                - Name: ns=5;Pairs
+                  Type: BaseObjectType
+                  Children:
+                  - Name: Pair
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 1
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Children:
+                      - Name: StringFormatter1
+                        Type: StringFormatter
+                        Children:
+                        - Name: Format
+                          Type: BaseDataVariableType
+                          DataType: LocalizedText
+                          ReferenceType: HasParameter
+                          Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  '33KV'"}
+                        - Name: ns=5;Source0
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftAFrom"
+                        - Name: ns=5;Source1
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftATo"
+                  - Name: Pair1
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 2
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Children:
+                      - Name: StringFormatter1
+                        Type: StringFormatter
+                        Children:
+                        - Name: Format
+                          Type: BaseDataVariableType
+                          DataType: LocalizedText
+                          ReferenceType: HasParameter
+                          Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'UTILITY'"}
+                        - Name: ns=5;Source0
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftAFrom"
+                        - Name: ns=5;Source1
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftATo"
+                  - Name: Pair2
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 3
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Children:
+                      - Name: StringFormatter1
+                        Type: StringFormatter
+                        Children:
+                        - Name: Format
+                          Type: BaseDataVariableType
+                          DataType: LocalizedText
+                          ReferenceType: HasParameter
+                          Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'PUMPROOM'"}
+                        - Name: ns=5;Source0
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftAFrom"
+                        - Name: ns=5;Source1
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftATo"
+                  - Name: Pair3
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 4
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Children:
+                      - Name: StringFormatter1
+                        Type: StringFormatter
+                        Children:
+                        - Name: Format
+                          Type: BaseDataVariableType
+                          DataType: LocalizedText
+                          ReferenceType: HasParameter
+                          Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'PAINTSHOP'"}
+                        - Name: ns=5;Source0
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftAFrom"
+                        - Name: ns=5;Source1
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftATo"
+                  - Name: Pair4
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 5
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Children:
+                      - Name: StringFormatter1
+                        Type: StringFormatter
+                        Children:
+                        - Name: Format
+                          Type: BaseDataVariableType
+                          DataType: LocalizedText
+                          ReferenceType: HasParameter
+                          Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'BODYSHOP'"}
+                        - Name: ns=5;Source0
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftAFrom"
+                        - Name: ns=5;Source1
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftATo"
+                  - Name: Pair5
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 6
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Children:
+                      - Name: StringFormatter1
+                        Type: StringFormatter
+                        Children:
+                        - Name: Format
+                          Type: BaseDataVariableType
+                          DataType: LocalizedText
+                          ReferenceType: HasParameter
+                          Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'TCF' "}
+                        - Name: ns=5;Source0
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftAFrom"
+                        - Name: ns=5;Source1
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftATo"
+                  - Name: Pair6
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 7
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Children:
+                      - Name: StringFormatter1
+                        Type: StringFormatter
+                        Children:
+                        - Name: Format
+                          Type: BaseDataVariableType
+                          DataType: LocalizedText
+                          ReferenceType: HasParameter
+                          Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'STAMPING'"}
+                        - Name: ns=5;Source0
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftAFrom"
+                        - Name: ns=5;Source1
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftATo"
+                  - Name: Pair7
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 8
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Children:
+                      - Name: StringFormatter1
+                        Type: StringFormatter
+                        Children:
+                        - Name: Format
+                          Type: BaseDataVariableType
+                          DataType: LocalizedText
+                          ReferenceType: HasParameter
+                          Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'ADMIN'"}
+                        - Name: ns=5;Source0
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftAFrom"
+                        - Name: ns=5;Source1
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftATo"
+                  - Name: Pair8
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 9
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Children:
+                      - Name: StringFormatter1
+                        Type: StringFormatter
+                        Children:
+                        - Name: Format
+                          Type: BaseDataVariableType
+                          DataType: LocalizedText
+                          ReferenceType: HasParameter
+                          Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'SPP'"}
+                        - Name: ns=5;Source0
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftAFrom"
+                        - Name: ns=5;Source1
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftATo"
+          - Name: Pair2
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Type: BaseDataVariableType
+              DataType: UInt32
+              Value: 3
+            - Name: Value
+              Type: BaseDataVariableType
+              DataType: String
+              Children:
+              - Name: KeyValueConverter1
+                Type: ValueMapConverter
+                Children:
+                - Name: Source
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/First_Report_Links/Selection1"
+                - Name: ns=5;Pairs
+                  Type: BaseObjectType
+                  Children:
+                  - Name: Pair
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 1
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Children:
+                      - Name: StringFormatter1
+                        Type: StringFormatter
+                        Children:
+                        - Name: Format
+                          Type: BaseDataVariableType
+                          DataType: LocalizedText
+                          ReferenceType: HasParameter
+                          Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  '33KV'"}
+                        - Name: ns=5;Source0
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftBFrom"
+                        - Name: ns=5;Source1
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftBTo"
+                  - Name: Pair1
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 2
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Children:
+                      - Name: StringFormatter1
+                        Type: StringFormatter
+                        Children:
+                        - Name: Format
+                          Type: BaseDataVariableType
+                          DataType: LocalizedText
+                          ReferenceType: HasParameter
+                          Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'UTILITY'"}
+                        - Name: ns=5;Source0
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftBFrom"
+                        - Name: ns=5;Source1
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftBTo"
+                  - Name: Pair2
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 3
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Children:
+                      - Name: StringFormatter1
+                        Type: StringFormatter
+                        Children:
+                        - Name: Format
+                          Type: BaseDataVariableType
+                          DataType: LocalizedText
+                          ReferenceType: HasParameter
+                          Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'PUMPROOM'"}
+                        - Name: ns=5;Source0
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftBFrom"
+                        - Name: ns=5;Source1
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftBTo"
+                  - Name: Pair3
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 4
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Children:
+                      - Name: StringFormatter1
+                        Type: StringFormatter
+                        Children:
+                        - Name: Format
+                          Type: BaseDataVariableType
+                          DataType: LocalizedText
+                          ReferenceType: HasParameter
+                          Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'PAINTSHOP'"}
+                        - Name: ns=5;Source0
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftBFrom"
+                        - Name: ns=5;Source1
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftBTo"
+                  - Name: Pair4
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 5
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Children:
+                      - Name: StringFormatter1
+                        Type: StringFormatter
+                        Children:
+                        - Name: Format
+                          Type: BaseDataVariableType
+                          DataType: LocalizedText
+                          ReferenceType: HasParameter
+                          Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'BODYSHOP'"}
+                        - Name: ns=5;Source0
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftBFrom"
+                        - Name: ns=5;Source1
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftBTo"
+                  - Name: Pair5
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 6
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Children:
+                      - Name: StringFormatter1
+                        Type: StringFormatter
+                        Children:
+                        - Name: Format
+                          Type: BaseDataVariableType
+                          DataType: LocalizedText
+                          ReferenceType: HasParameter
+                          Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'TCF' "}
+                        - Name: ns=5;Source0
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftBFrom"
+                        - Name: ns=5;Source1
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftBTo"
+                  - Name: Pair6
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 7
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Children:
+                      - Name: StringFormatter1
+                        Type: StringFormatter
+                        Children:
+                        - Name: Format
+                          Type: BaseDataVariableType
+                          DataType: LocalizedText
+                          ReferenceType: HasParameter
+                          Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'STAMPING'"}
+                        - Name: ns=5;Source0
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftBFrom"
+                        - Name: ns=5;Source1
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftBTo"
+                  - Name: Pair7
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 8
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Children:
+                      - Name: StringFormatter1
+                        Type: StringFormatter
+                        Children:
+                        - Name: Format
+                          Type: BaseDataVariableType
+                          DataType: LocalizedText
+                          ReferenceType: HasParameter
+                          Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'ADMIN'"}
+                        - Name: ns=5;Source0
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftBFrom"
+                        - Name: ns=5;Source1
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftBTo"
+                  - Name: Pair8
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 9
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Children:
+                      - Name: StringFormatter1
+                        Type: StringFormatter
+                        Children:
+                        - Name: Format
+                          Type: BaseDataVariableType
+                          DataType: LocalizedText
+                          ReferenceType: HasParameter
+                          Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'SPP'"}
+                        - Name: ns=5;Source0
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftBFrom"
+                        - Name: ns=5;Source1
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftBTo"
+          - Name: Pair3
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Type: BaseDataVariableType
+              DataType: UInt32
+              Value: 4
+            - Name: Value
+              Type: BaseDataVariableType
+              DataType: String
+              Children:
+              - Name: KeyValueConverter1
+                Type: ValueMapConverter
+                Children:
+                - Name: Source
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/First_Report_Links/Selection1"
+                - Name: ns=5;Pairs
+                  Type: BaseObjectType
+                  Children:
+                  - Name: Pair
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 1
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Children:
+                      - Name: StringFormatter1
+                        Type: StringFormatter
+                        Children:
+                        - Name: Format
+                          Type: BaseDataVariableType
+                          DataType: LocalizedText
+                          ReferenceType: HasParameter
+                          Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  '33KV'"}
+                        - Name: ns=5;Source0
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftCFrom"
+                        - Name: ns=5;Source1
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftCTo"
+                  - Name: Pair1
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 2
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Children:
+                      - Name: StringFormatter1
+                        Type: StringFormatter
+                        Children:
+                        - Name: Format
+                          Type: BaseDataVariableType
+                          DataType: LocalizedText
+                          ReferenceType: HasParameter
+                          Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'UTILITY'"}
+                        - Name: ns=5;Source0
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftCFrom"
+                        - Name: ns=5;Source1
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftCTo"
+                  - Name: Pair2
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 3
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Children:
+                      - Name: StringFormatter1
+                        Type: StringFormatter
+                        Children:
+                        - Name: Format
+                          Type: BaseDataVariableType
+                          DataType: LocalizedText
+                          ReferenceType: HasParameter
+                          Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'PUMPROOM'"}
+                        - Name: ns=5;Source0
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftCFrom"
+                        - Name: ns=5;Source1
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftCTo"
+                  - Name: Pair3
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 4
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Children:
+                      - Name: StringFormatter1
+                        Type: StringFormatter
+                        Children:
+                        - Name: Format
+                          Type: BaseDataVariableType
+                          DataType: LocalizedText
+                          ReferenceType: HasParameter
+                          Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'PAINTSHOP'"}
+                        - Name: ns=5;Source0
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftCFrom"
+                        - Name: ns=5;Source1
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftCTo"
+                  - Name: Pair4
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 5
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Children:
+                      - Name: StringFormatter1
+                        Type: StringFormatter
+                        Children:
+                        - Name: Format
+                          Type: BaseDataVariableType
+                          DataType: LocalizedText
+                          ReferenceType: HasParameter
+                          Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'BODYSHOP'"}
+                        - Name: ns=5;Source0
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftCFrom"
+                        - Name: ns=5;Source1
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftCTo"
+                  - Name: Pair5
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 6
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Children:
+                      - Name: StringFormatter1
+                        Type: StringFormatter
+                        Children:
+                        - Name: Format
+                          Type: BaseDataVariableType
+                          DataType: LocalizedText
+                          ReferenceType: HasParameter
+                          Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'TCF' "}
+                        - Name: ns=5;Source0
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftCFrom"
+                        - Name: ns=5;Source1
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftCTo"
+                  - Name: Pair6
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 7
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Children:
+                      - Name: StringFormatter1
+                        Type: StringFormatter
+                        Children:
+                        - Name: Format
+                          Type: BaseDataVariableType
+                          DataType: LocalizedText
+                          ReferenceType: HasParameter
+                          Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'STAMPING'"}
+                        - Name: ns=5;Source0
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftCFrom"
+                        - Name: ns=5;Source1
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftCTo"
+                  - Name: Pair7
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 8
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Children:
+                      - Name: StringFormatter1
+                        Type: StringFormatter
+                        Children:
+                        - Name: Format
+                          Type: BaseDataVariableType
+                          DataType: LocalizedText
+                          ReferenceType: HasParameter
+                          Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'ADMIN'"}
+                        - Name: ns=5;Source0
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftCFrom"
+                        - Name: ns=5;Source1
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftCTo"
+                  - Name: Pair8
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 9
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Children:
+                      - Name: StringFormatter1
+                        Type: StringFormatter
+                        Children:
+                        - Name: Format
+                          Type: BaseDataVariableType
+                          DataType: LocalizedText
+                          ReferenceType: HasParameter
+                          Value: {"LocaleId":"en-US","Text":"SELECT *FROM \"MeterDataView\" WHERE LocalTimestamp BETWEEN {0:sql_literal} AND {1:sql_literal} AND  Jace =  'SPP'"}
+                        - Name: ns=5;Source0
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftCFrom"
+                        - Name: ns=5;Source1
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/ShiftCTo"
+- Name: Date
+  Type: BaseDataVariableType
+  DataType: DateTime
+- Name: Startupfrom
+  Type: BaseDataVariableType
+  DataType: DateTime
+- Name: StartupTo
+  Type: BaseDataVariableType
+  DataType: DateTime
+- Name: ShiftAFrom
+  Type: BaseDataVariableType
+  DataType: DateTime
+- Name: ShiftATo
+  Type: BaseDataVariableType
+  DataType: DateTime
+- Name: ShiftBFrom
+  Type: BaseDataVariableType
+  DataType: DateTime
+- Name: ShiftBTo
+  Type: BaseDataVariableType
+  DataType: DateTime
+- Name: ShiftCFrom
+  Type: BaseDataVariableType
+  DataType: DateTime
+- Name: ShiftCTo
+  Type: BaseDataVariableType
+  DataType: DateTime
+- Name: shiftReportPath
+  Id: g=29f38c5aebb752e720bafc527c626287
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "D:\\ShiftWise_Energy_Reports\\ShiftWise_Consumption_Report.pdf"
+- Name: DateforreportFrom
+  Type: BaseDataVariableType
+  DataType: DateTime
+  Children:
+  - Name: KeyValueConverter1
+    Type: ValueMapConverter
+    Children:
+    - Name: Source
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../ShiftNumber"
+    - Name: ns=5;Pairs
+      Type: BaseObjectType
+      Children:
+      - Name: Pair
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 1
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: DateTime
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../Startupfrom"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+      - Name: Pair1
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 2
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: DateTime
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../ShiftAFrom"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+      - Name: Pair2
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 3
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: DateTime
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../ShiftBFrom"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+      - Name: Pair3
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 4
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: DateTime
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../ShiftCFrom"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+- Name: DateforreportTo
+  Type: BaseDataVariableType
+  DataType: DateTime
+  Children:
+  - Name: KeyValueConverter1
+    Type: ValueMapConverter
+    Children:
+    - Name: Source
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../ShiftNumber"
+    - Name: ns=5;Pairs
+      Type: BaseObjectType
+      Children:
+      - Name: Pair
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 1
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: DateTime
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../StartupTo"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+      - Name: Pair1
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 2
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: DateTime
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../ShiftATo"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+      - Name: Pair2
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 3
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: DateTime
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../ShiftBTo"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+      - Name: Pair3
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Type: BaseDataVariableType
+          DataType: UInt32
+          Value: 4
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: DateTime
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../ShiftCTo"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+- Name: DumpQuerytoReport
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "0"
+  Children:
+  - Name: ConditionalConverter1
+    Type: ConditionalConverter
+    Children:
+    - Name: Condition
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../../../../../../Checkbox1/Checked"
+    - Name: TrueValue
+      Type: BaseDataVariableType
+      DataType: String
+      ReferenceType: HasParameter
+      Value: "/Objects/Tata_EMS_17_10_to_1_5_version1/Model/Reports/ShiftReportTags/Meter_Wise_query"
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/Jace_Wise_query"
+    - Name: FalseValue
+      Type: BaseDataVariableType
+      DataType: String
+      ReferenceType: HasParameter
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/Meter_Wise_query"
