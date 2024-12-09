@@ -1,0 +1,101 @@
+Name: Piechart
+Id: g=21c3eb45e95433df75b58c942b2fd16d
+Type: FolderType
+Children:
+- Name: 'Active Energy '
+  Id: g=471353d7c1c321aee0c5dda2f2e3d5b8
+  Type: BaseDataVariableType
+  DataType: Float
+  Children:
+  - Name: ExpressionEvaluator1
+    Type: ExpressionEvaluator
+    Children:
+    - Name: Expression
+      Type: BaseDataVariableType
+      DataType: String
+      ReferenceType: HasParameter
+      Value: "({0} - {1} ) + ({2} - {3}) "
+    - Name: ns=5;Source0
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/Meter1ActiveEnergyMax"
+    - Name: ns=5;Source1
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/Meter1ActiveEnergyMin"
+    - Name: ns=5;Source2
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/Meter2ActiveEnergyMax"
+    - Name: ns=5;Source3
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/Meter2ActiveEnergyMin"
+- Name: Reactive Energy
+  Type: BaseDataVariableType
+  DataType: Float
+  Children:
+  - Name: ExpressionEvaluator1
+    Type: ExpressionEvaluator
+    Children:
+    - Name: Expression
+      Type: BaseDataVariableType
+      DataType: String
+      ReferenceType: HasParameter
+      Value: "({0} - {1} ) + ({2} - {3}) "
+    - Name: ns=5;Source0
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/Meter1ReactiveEnergyMax"
+    - Name: ns=5;Source1
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/Meter1ReactiveEnergyMin"
+    - Name: ns=5;Source2
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/Meter2ReactiveEnergyMax"
+    - Name: ns=5;Source3
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/Reports/ShiftReportTags/Meter2ReactiveEnergyMin"
