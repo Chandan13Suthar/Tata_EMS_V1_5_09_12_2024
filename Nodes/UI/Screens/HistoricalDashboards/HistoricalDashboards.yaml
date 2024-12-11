@@ -56098,7 +56098,7 @@ Children:
                       Type: BaseDataVariableType
                       DataType: String
                       Value: "Dialog"
-                  - Name: MethodContainer5
+                  - Name: MethodContainer1
                     Type: BaseObjectType
                     Children:
                     - Name: ns=5;ObjectPointer
@@ -56113,7 +56113,7 @@ Children:
                     - Name: ns=5;Method
                       Type: BaseDataVariableType
                       DataType: String
-                      Value: "IncrementDecrementTask"
+                      Value: "TriggerLongRunningTask"
                 - Name: EventArguments
                   Type: MouseClickEvent
                   Children:

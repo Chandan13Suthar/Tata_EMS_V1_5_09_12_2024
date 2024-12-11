@@ -208,4 +208,4 @@ Children:
   Type: NetLogic
   Children:
   - Class: Method
-    Name: DateUpdateTask
+    Name: TriggerLongRunningTask

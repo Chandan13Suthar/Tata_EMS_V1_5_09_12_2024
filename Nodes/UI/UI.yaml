@@ -4106,11 +4106,12 @@ Children:
               Type: BaseVariableType
               DataType: Size
               ModellingRule: Optional
-              Value: 6.0
+              Value: 4.0
             - Name: BottomMargin
               Type: BaseVariableType
               DataType: Size
               ModellingRule: Optional
+              Value: 4.0
             - Name: Enabled
               Type: BaseDataVariableType
               DataType: Boolean
@@ -4799,11 +4800,12 @@ Children:
               Type: BaseVariableType
               DataType: Size
               ModellingRule: Optional
-              Value: -2.0
+              Value: 4.0
             - Name: BottomMargin
               Type: BaseVariableType
               DataType: Size
               ModellingRule: Optional
+              Value: 4.0
             - Name: Enabled
               Type: BaseDataVariableType
               DataType: Boolean
@@ -5036,11 +5038,12 @@ Children:
               Type: BaseVariableType
               DataType: Size
               ModellingRule: Optional
-              Value: -2.0
+              Value: 4.0
             - Name: BottomMargin
               Type: BaseVariableType
               DataType: Size
               ModellingRule: Optional
+              Value: 4.0
             - Name: Enabled
               Type: BaseDataVariableType
               DataType: Boolean
@@ -6814,12 +6817,12 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: -1010.0
+      Value: -820.0
     - Name: TopMargin
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 120.0
+      Value: 110.0
 - Name: MainWindow1
   Id: g=eff1f10279a82590f335d8b6bcc1924b
   Supertype: Window

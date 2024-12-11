@@ -57,10 +57,7 @@ public class RuntimeNetLogic3 : BaseNetLogic
         timerangeVariable = owner.TimeRangeVariable;
         dateto1Variable = owner.Dateto1Variable;
         datefrom1Variable = owner.Datefrom1Variable;
-        // durationVariable = owner.DurationVariable;
-
-        // periodicTask = new PeriodicTask(IncrementDecrementTask, 5000, LogicObject);
-        // periodicTask.Start();
+    
     }
 
     public override void Stop()
@@ -527,5 +524,5 @@ public class RuntimeNetLogic3 : BaseNetLogic
     private IUAVariable consumption2Variable;
     private IUAVariable button1Variable;
     private IUAVariable button2Variable;
-    //  private PeriodicTask periodicTask;
+    
 }

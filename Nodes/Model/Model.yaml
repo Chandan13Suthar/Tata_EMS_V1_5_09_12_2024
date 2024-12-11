@@ -2152,7 +2152,7 @@ Children:
     Type: NetLogic
     Children:
     - Class: Reference
-      Target: g=39d14253f396fe0ffbe1d2bedc6003b4
+      Target: g=33babf1213b3b40d4264e964a90a82be
       Direction: Forward
   - Name: Date
     Type: BaseDataVariableType
@@ -2415,8 +2415,8 @@ Children:
     Type: NetLogic
     Children:
     - Class: Method
-      Name: IncrementDecrementTask
-      Id: g=39d14253f396fe0ffbe1d2bedc6003b4
+      Name: TriggerLongRunningTask
+      Id: g=33babf1213b3b40d4264e964a90a82be
   - Name: Date
     Type: BaseDataVariableType
     DataType: DateTime
@@ -4100,76 +4100,6 @@ Children:
     - Class: Reference
       Target: g=bf4274e1e846023b7db9b730af713bc4
       Direction: Forward
-  - Name: Button
-    Type: BaseDataVariableType
-    DataType: Boolean
-  - Name: Target
-    Type: BaseDataVariableType
-    DataType: Float
-    Children:
-    - Name: DynamicLink
-      Type: DynamicLink
-      DataType: NodePath
-      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/Target"
-  - Name: TargetStamping
-    Type: BaseDataVariableType
-    DataType: Float
-    Children:
-    - Name: DynamicLink
-      Type: DynamicLink
-      DataType: NodePath
-      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetStamping"
-  - Name: TargetTcf
-    Type: BaseDataVariableType
-    DataType: Float
-    Children:
-    - Name: DynamicLink
-      Type: DynamicLink
-      DataType: NodePath
-      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetTCF"
-  - Name: TargetBodyshop
-    Type: BaseDataVariableType
-    DataType: Float
-    Children:
-    - Name: DynamicLink
-      Type: DynamicLink
-      DataType: NodePath
-      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetBodyshop"
-  - Name: TargetEngineshop
-    Type: BaseDataVariableType
-    DataType: Float
-    Children:
-    - Name: DynamicLink
-      Type: DynamicLink
-      DataType: NodePath
-      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetAdmin"
-  - Name: TargetPaintshop
-    Type: BaseDataVariableType
-    DataType: Float
-    Children:
-    - Name: DynamicLink
-      Type: DynamicLink
-      DataType: NodePath
-      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetPaintShop"
-  - Name: TargetSpp
-    Type: BaseDataVariableType
-    DataType: Float
-    Children:
-    - Name: DynamicLink
-      Type: DynamicLink
-      DataType: NodePath
-      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetSPP"
-  - Name: TargetSpare
-    Type: BaseDataVariableType
-    DataType: Float
-  - Name: Target33KV
-    Type: BaseDataVariableType
-    DataType: Float
-    Children:
-    - Name: DynamicLink
-      Type: DynamicLink
-      DataType: NodePath
-      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/Target33KV"
 - Name: ProductionCount1
   Id: g=7586f0fb6d26a6c03f9ad3dbb8b406e8
   Supertype: BaseObjectType
@@ -4194,125 +4124,6 @@ Children:
     - Class: Method
       Name: IncrementDecrementTask
       Id: g=bf4274e1e846023b7db9b730af713bc4
-  - Name: Button
-    Type: BaseDataVariableType
-    DataType: Boolean
-    Value: true
-  - Name: Target
-    Type: BaseDataVariableType
-    DataType: Float
-    Children:
-    - Name: DynamicLink
-      Type: DynamicLink
-      DataType: NodePath
-      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/Target"
-      Children:
-      - Name: Mode
-        Type: BaseVariableType
-        DataType: DynamicLinkMode
-        ModellingRule: Optional
-        Value: 2
-  - Name: TargetStamping
-    Type: BaseDataVariableType
-    DataType: Float
-    Children:
-    - Name: DynamicLink
-      Type: DynamicLink
-      DataType: NodePath
-      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetStamping"
-      Children:
-      - Name: Mode
-        Type: BaseVariableType
-        DataType: DynamicLinkMode
-        ModellingRule: Optional
-        Value: 2
-  - Name: TargetTcf
-    Type: BaseDataVariableType
-    DataType: Float
-    Children:
-    - Name: DynamicLink
-      Type: DynamicLink
-      DataType: NodePath
-      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetTCF"
-      Children:
-      - Name: Mode
-        Type: BaseVariableType
-        DataType: DynamicLinkMode
-        ModellingRule: Optional
-        Value: 2
-  - Name: TargetBodyshop
-    Type: BaseDataVariableType
-    DataType: Float
-    Children:
-    - Name: DynamicLink
-      Type: DynamicLink
-      DataType: NodePath
-      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetBodyshop"
-      Children:
-      - Name: Mode
-        Type: BaseVariableType
-        DataType: DynamicLinkMode
-        ModellingRule: Optional
-        Value: 2
-  - Name: TargetEngineshop
-    Type: BaseDataVariableType
-    DataType: Float
-    Children:
-    - Name: DynamicLink
-      Type: DynamicLink
-      DataType: NodePath
-      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetAdmin"
-      Children:
-      - Name: Mode
-        Type: BaseVariableType
-        DataType: DynamicLinkMode
-        ModellingRule: Optional
-        Value: 2
-  - Name: TargetPaintshop
-    Type: BaseDataVariableType
-    DataType: Float
-    Children:
-    - Name: DynamicLink
-      Type: DynamicLink
-      DataType: NodePath
-      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetPaintShop"
-      Children:
-      - Name: Mode
-        Type: BaseVariableType
-        DataType: DynamicLinkMode
-        ModellingRule: Optional
-        Value: 2
-  - Name: TargetSpp
-    Type: BaseDataVariableType
-    DataType: Float
-    Children:
-    - Name: DynamicLink
-      Type: DynamicLink
-      DataType: NodePath
-      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/TargetSPP"
-      Children:
-      - Name: Mode
-        Type: BaseVariableType
-        DataType: DynamicLinkMode
-        ModellingRule: Optional
-        Value: 2
-  - Name: TargetSpare
-    Type: BaseDataVariableType
-    DataType: Float
-  - Name: Target33KV
-    Type: BaseDataVariableType
-    DataType: Float
-    Children:
-    - Name: DynamicLink
-      Type: DynamicLink
-      DataType: NodePath
-      Value: "/Objects/Tata_EMS_V1_5_09_12_2024/Model/HomePageHistogram/HomePage2/PRoduction_And_Target/Target33KV"
-      Children:
-      - Name: Mode
-        Type: BaseVariableType
-        DataType: DynamicLinkMode
-        ModellingRule: Optional
-        Value: 2
 - Name: Panel_Meter_Selection_For_Graph
   Id: g=899bd5a9b60a4b769f6d1e4b5ac01085
   Type: BaseDataVariableType
@@ -4536,3 +4347,7 @@ Children:
   Type: BaseDataVariableType
   DataType: DateTime
 - File: Harmonics/Harmonics.yaml
+- Name: QueryStatus
+  Id: g=dda0f130f87b2aff2f66952706f9ff45
+  Type: BaseDataVariableType
+  DataType: Boolean

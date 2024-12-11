@@ -164,18 +164,18 @@ public class Chiller : BaseNetLogic
 
             {
 
-                myStore.Query("SELECT MAX(Active_Energy_Total) FROM MeterDataView WHERE LocalTimestamp  BETWEEN '" + new123 + " 14:00:00' AND '" + new123 + " 14:35:00' AND Meter = 'J2_MCB_MVS_03_O/G_F3' ", out string[] header2, out object[,] resultSet2);
-                myStore.Query("SELECT MIN(Active_Energy_Total) FROM MeterDataView WHERE LocalTimestamp  BETWEEN '" + new123 + " 14:00:00' AND '" + new123 + " 14:35:00' AND Meter = 'J2_MCB_MVS_03_O/G_F3' ", out string[] header3, out object[,] resultSet3);
-                myStore.Query("SELECT MAX(Active_Energy_Total) FROM MeterDataView WHERE LocalTimestamp  BETWEEN '" + new123 + " 14:00:00' AND '" + new123 + " 14:35:00' AND Meter = 'J2_MCB_MCC_04_IN1F1' ", out string[] header4, out object[,] resultSet4);
-                myStore.Query("SELECT MIN(Active_Energy_Total) FROM MeterDataView WHERE LocalTimestamp  BETWEEN '" + new123 + " 14:00:00' AND '" + new123 + " 14:35:00' AND Meter = 'J2_MCB_MCC_04_IN1F1' ", out string[] header5, out object[,] resultSet5);
-                myStore.Query("SELECT MAX(Active_Energy_Total) FROM MeterDataView WHERE LocalTimestamp  BETWEEN '" + new123 + " 14:00:00' AND '" + new123 + " 14:35:00' AND Meter = 'J2_MCB_MCC_03_IN1F1' ", out string[] header6, out object[,] resultSet6);
-                myStore.Query("SELECT MIN(Active_Energy_Total) FROM MeterDataView WHERE LocalTimestamp  BETWEEN '" + new123 + " 14:00:00' AND '" + new123 + " 14:35:00' AND Meter = 'J2_MCB_MCC_03_IN1F1' ", out string[] header7, out object[,] resultSet7);
-                myStore.Query("SELECT MAX(Active_Energy_Total) FROM MeterDataView WHERE LocalTimestamp  BETWEEN '" + new123 + " 14:00:00' AND '" + new123 + " 14:35:00' AND Meter = 'J2_MCB_MCC_05_IN1F1' ", out string[] header8, out object[,] resultSet8);
-                myStore.Query("SELECT MIN(Active_Energy_Total) FROM MeterDataView WHERE LocalTimestamp  BETWEEN '" + new123 + " 14:00:00' AND '" + new123 + " 14:35:00' AND Meter = 'J2_MCB_MCC_05_IN1F1' ", out string[] header9, out object[,] resultSet9);
-                myStore.Query("SELECT MAX(Active_Energy_Total) FROM MeterDataView WHERE LocalTimestamp  BETWEEN '" + new123 + " 14:00:00' AND '" + new123 + " 14:35:00' AND Meter = 'J2_MCB_MVS_02_IN1F1' ", out string[] header10, out object[,] resultSet10);
-                myStore.Query("SELECT MIN(Active_Energy_Total) FROM MeterDataView WHERE LocalTimestamp  BETWEEN '" + new123 + " 14:00:00' AND '" + new123 + " 14:35:00' AND Meter = 'J2_MCB_MVS_02_IN1F1' ", out string[] header11, out object[,] resultSet11);
-                myStore.Query("SELECT MAX(Active_Energy_Total) FROM MeterDataView WHERE LocalTimestamp  BETWEEN '" + new123 + " 14:00:00' AND '" + new123 + " 14:35:00' AND Meter = 'J2_MCB_MCC_01_IN1F1' ", out string[] header12, out object[,] resultSet12);
-                myStore.Query("SELECT MIN(Active_Energy_Total) FROM MeterDataView WHERE LocalTimestamp  BETWEEN '" + new123 + " 14:00:00' AND '" + new123 + " 14:35:00' AND Meter = 'J2_MCB_MCC_01_IN1F1' ", out string[] header13, out object[,] resultSet13);
+                myStore.Query("SELECT MAX(Active_Energy_Total) FROM MeterDataView WHERE LocalTimestamp  BETWEEN '" + new123 + " 06:45:00' AND '" + new123 + " 15:30:00' AND Meter = 'J2_MCB_MVS_03_O/G_F3' ", out string[] header2, out object[,] resultSet2);
+                myStore.Query("SELECT MIN(Active_Energy_Total) FROM MeterDataView WHERE LocalTimestamp  BETWEEN '" + new123 + " 06:45:00' AND '" + new123 + " 15:30:00' AND Meter = 'J2_MCB_MVS_03_O/G_F3' ", out string[] header3, out object[,] resultSet3);
+                myStore.Query("SELECT MAX(Active_Energy_Total) FROM MeterDataView WHERE LocalTimestamp  BETWEEN '" + new123 + " 06:45:00' AND '" + new123 + " 15:30:00' AND Meter = 'J2_MCB_MCC_04_IN1F1' ", out string[] header4, out object[,] resultSet4);
+                myStore.Query("SELECT MIN(Active_Energy_Total) FROM MeterDataView WHERE LocalTimestamp  BETWEEN '" + new123 + " 06:45:00' AND '" + new123 + " 15:30:00' AND Meter = 'J2_MCB_MCC_04_IN1F1' ", out string[] header5, out object[,] resultSet5);
+                myStore.Query("SELECT MAX(Active_Energy_Total) FROM MeterDataView WHERE LocalTimestamp  BETWEEN '" + new123 + " 06:45:00' AND '" + new123 + " 15:30:00' AND Meter = 'J2_MCB_MCC_03_IN1F1' ", out string[] header6, out object[,] resultSet6);
+                myStore.Query("SELECT MIN(Active_Energy_Total) FROM MeterDataView WHERE LocalTimestamp  BETWEEN '" + new123 + " 06:45:00' AND '" + new123 + " 15:30:00' AND Meter = 'J2_MCB_MCC_03_IN1F1' ", out string[] header7, out object[,] resultSet7);
+                myStore.Query("SELECT MAX(Active_Energy_Total) FROM MeterDataView WHERE LocalTimestamp  BETWEEN '" + new123 + " 06:45:00' AND '" + new123 + " 15:30:00' AND Meter = 'J2_MCB_MCC_05_IN1F1' ", out string[] header8, out object[,] resultSet8);
+                myStore.Query("SELECT MIN(Active_Energy_Total) FROM MeterDataView WHERE LocalTimestamp  BETWEEN '" + new123 + " 06:45:00' AND '" + new123 + " 15:30:00' AND Meter = 'J2_MCB_MCC_05_IN1F1' ", out string[] header9, out object[,] resultSet9);
+                myStore.Query("SELECT MAX(Active_Energy_Total) FROM MeterDataView WHERE LocalTimestamp  BETWEEN '" + new123 + " 06:45:00' AND '" + new123 + " 15:30:00' AND Meter = 'J2_MCB_MVS_02_IN1F1' ", out string[] header10, out object[,] resultSet10);
+                myStore.Query("SELECT MIN(Active_Energy_Total) FROM MeterDataView WHERE LocalTimestamp  BETWEEN '" + new123 + " 06:45:00' AND '" + new123 + " 15:30:00' AND Meter = 'J2_MCB_MVS_02_IN1F1' ", out string[] header11, out object[,] resultSet11);
+                myStore.Query("SELECT MAX(Active_Energy_Total) FROM MeterDataView WHERE LocalTimestamp  BETWEEN '" + new123 + " 06:45:00' AND '" + new123 + " 15:30:00' AND Meter = 'J2_MCB_MCC_01_IN1F1' ", out string[] header12, out object[,] resultSet12);
+                myStore.Query("SELECT MIN(Active_Energy_Total) FROM MeterDataView WHERE LocalTimestamp  BETWEEN '" + new123 + " 06:45:00' AND '" + new123 + " 15:30:00' AND Meter = 'J2_MCB_MCC_01_IN1F1' ", out string[] header13, out object[,] resultSet13);
 
 
 
@@ -416,11 +416,12 @@ public class Chiller : BaseNetLogic
             Project.Current.GetVariable("Model/Compressor/J2_MCB_MCC_01_IN1F1_MAX").Value = value11;
             Project.Current.GetVariable("Model/Compressor/J2_MCB_MCC_01_IN1F1_MIN").Value = value12;
 
-
-         }
+            
+        }
         catch (Exception ex)
         {
-            Log.Error("HomePageComparisionLogic", $"Error executing SQL queries: {ex.Message}");
+            Log.Error("chiller logic error in executing query", $"Error executing SQL queries: {ex.Message}");
+            
         }
     }
 
